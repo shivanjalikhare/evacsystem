@@ -21,9 +21,19 @@ class MarkersController extends AppController
     public function index()
     {
         $markers = $this->paginate($this->Markers);
-
+        
+        //$this->Markers->find()
         $this->set(compact('markers'));
         $this->set('_serialize', ['markers']);
+        //$this->set('locationMarker', $this->Marker->locationMarker(location_Marker));
+        $this->loadModel('Locations');
+
+        $locations = $this->Locations->find('list',[
+            'keyField' => 'id_locations',
+            'valueField' => 'city',
+        ]);
+        $this->set(compact('locations'));
+        $this->set('_serialize',['locations']);
     }
 
     /**
@@ -71,20 +81,43 @@ class MarkersController extends AppController
      */
     public function edit($id = null)
     {
-        $marker = $this->Markers->get($id, [
-            'contain' => []
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $marker = $this->Markers->patchEntity($marker, $this->request->getData());
-            if ($this->Markers->save($marker)) {
-                $this->Flash->success(__('The marker has been saved.'));
+        //$controllerName = $this->request->getParam('controller');
+        //$controllerName = $this->request->param('controller');
 
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The marker could not be saved. Please, try again.'));
-        }
-        $this->set(compact('marker'));
-        $this->set('_serialize', ['marker']);
+        $markers = $this->paginate($this->Markers);
+        
+        
+    //$this->Markers->find()
+        $this->set(compact('markers'));
+        $this->set('_serialize', ['markers']);
+        //$this->set('locationMarker', $this->Marker->locationMarker(location_Marker));
+        $this->loadModel('Locations');
+
+        $locations = $this->Locations->find('list',[
+            
+            'valueField' => 'city',
+        ]);
+        $selected = $this->request->data('select');
+        $locationsq = $this->Locations->find('all', 
+                   array('conditions'=>array('Locations.id'=>$selected)));
+   
+        $locationsq1 = $this->Markers->find('all', 
+                   array('conditions'=>array('Markers.name'=>$locationsq->first()['city'])));
+
+
+
+        $markers = $locationsq1;
+        $this->set(compact('locations'));
+        $this->set('_serialize',['locations']);
+       $this->set('markers', $markers);
+        
+        // $as = $this->Markers->find('id',$selected);
+        // $result = $this->Marker->find('all',[
+        // 'conditions'=> ['Markers.id >' => $_POST['location_bracket']],
+        // 'contain' => ['lat', 'lng'], 
+        // ]);
+        // $this->set('result', $result);
+        // echo $as;
     }
 
     /**
