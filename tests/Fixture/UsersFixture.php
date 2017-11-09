@@ -15,10 +15,9 @@ class UsersFixture extends TestFixture
      *
      * @var array
      */
-
-
     // @codingStandardsIgnoreStart
-   public $fields = [
+	public $connection = 'test';
+    public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
         'email' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'password' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
@@ -40,9 +39,8 @@ class UsersFixture extends TestFixture
      *
      * @var array
      */
-   public $records = [
-        [
-            'id' => 1,
+    public $records = [
+            ['id' => 1,
             'email' => 'Lorem ipsum dolor sit amet',
             'password' => 'Lorem ipsum dolor sit amet',
             'phone' => 'Lorem ipsum dolor sit amet',
@@ -67,4 +65,3 @@ class UsersFixture extends TestFixture
         ],
     ];
 }
-
