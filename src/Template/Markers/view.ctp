@@ -1,19 +1,59 @@
-<div >
-    <h4><?php echo hello ?>
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Marker[]|\Cake\Collection\CollectionInterface $markers
+ */
+?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Safe shelter Details</h3>
+<div>
+    <?php 
+    echo $this->Form->create('dropdown', array('name' => 'dropdown'));
+    echo $this->Form->input('select', array('options' => $locations, 
+        'empty' => 'Select Location', 'id' => 'selected', 'value' => 'selected')); 
+    echo $this->Form->submit(); 
+
+    ?>
+
 </div>
-<div class='related'>
-    <h4><?php echo __('Markers for location'); ?>
-    <?php if(!empty($location->city)): ?>
-    <table>
-        <tr>
-            <th><?php echo __('type'); ?></th>
-            <th><?php echo __('city'); ?></th>
-            <th class="actions"><?php echo __('Actions'); ?></th>
-        </tr>
-        <?php foreach ($location->city as $city): ?>
-        <tr>
-            <td><?php echo $city->city; ?> </td>
-            <td class="actions">
-                <?php 
-        </tr>
-    </table>
+<br>
+    
+    <div id="map"></div>
+    <script>
+      function initMap() {
+
+
+        var a = [{}];
+        <?php foreach ($markers as $marker): ?>
+            a.push({lat: <?= $marker->lat ?>,lng: <?= $marker->lng ?>});
+            
+        <?php endforeach; ?>
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: a[1]
+        });
+
+        for(var i=1;i <=a.length;i++){
+        var marker1 = new google.maps.Marker({
+          position: a[i],
+          map: map
+        });    
+        }
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFJUZ4vcXLIbHNR1exzevOweYJaoR3JB8&callback=initMap">
+    </script>
+  </body>
+</html>
