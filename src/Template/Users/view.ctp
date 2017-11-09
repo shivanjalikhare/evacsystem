@@ -11,10 +11,10 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
+        <!--<li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
+        <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>-->
         <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
+        <!--<li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>-->
     </ul>
 </nav>
 <div class="users view large-9 medium-8 columns content">
@@ -26,7 +26,7 @@
   <div class="panel-heading">  <h4 >User Profile</h4></div>
    <div class="panel-body">
        
-    <div class="box box-info">
+   <!-- <div class="box box-info">
         
             <div class="box-body">
                      <div class="col-sm-6">
@@ -41,10 +41,7 @@
     
               <!-- /input-group -->
             </div>
-            <div class="col-sm-6">
-            <h4 style="color:#00b1b1;"></h4></span>
-              <span></span>            
-            </div>
+            
             <div class="clearfix"></div>
             <hr style="margin:2px 0 5px 0;">
     
@@ -93,9 +90,9 @@
               $(function() {
     $('#profile-image1').on('click', function() {
         $('#profile-image-upload').click();
-    });
-});       
-</script> 
+          });
+        });       
+    </script> 
        
 
    </div>

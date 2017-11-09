@@ -52,14 +52,20 @@ Router::scope('/', function (RouteBuilder $routes) {
     //$routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
     $routes->connect('/', ['controller' => 'Users', 'action' => 'login']);
+
+
     $routes->connect('/login', ['controller' => 'Users', 'action' => 'login']);
     $routes->connect('/signup', ['controller' => 'Users', 'action' => 'signup']);
     $routes->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
     $routes->connect('/delete', ['controller' => 'Users', 'action' => 'delete']);
-    $routes->connect('/users/edit', ['controller' => 'Users', 'action' => 'edit']);
+    $routes->connect('/dashboard', ['controller' => 'Users', 'action' => 'dashboard']);
     $routes->connect('/users/add', ['controller' => 'Users', 'action' => 'add']);
     $routes->connect('/users/view', ['controller' => 'Users', 'action' => 'view']);
     $routes->connect('/users/index', ['controller' => 'Users', 'action' => 'index']);
+    $routes->connect('/users/markers', ['controller' => 'Markers', 'action' => 'index']);
+    $routes->connect('/users/locations', ['controller' => 'Locations', 'action' => 'index']);
+    $routes->connect('/users/markers/view', ['controller' => 'Markers', 'action' => 'view']);
+    //$routes->connect('/users/locations/markers', ['controller' => 'Markers', 'action' => 'index']);
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */

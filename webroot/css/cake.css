@@ -4,19 +4,21 @@ a.disabled {
 }
 
 a:hover {
-    color: #15848F;
+    color:  #ff9933;
+    text-decoration: none;
+
 }
 
 a {
-    color: #1798A5;
+    color: #ff5500;
 }
 
 .side-nav li a:not(.button) {
-    color: #15848F;
+    color: ;
 }
 
 .side-nav li a:not(.button):hover {
-    color: #15848F;
+    color: ;
 }
 
 header {
@@ -390,7 +392,7 @@ fieldset {
 
 fieldset legend {
     border-bottom: 2px solid #1798A5;
-    width: 100%;
+    width: 80%;
     line-height: 2rem;
 }
 
@@ -401,12 +403,13 @@ fieldset legend {
 }
 
 .form button:hover, .form button:focus {
-    background: #BE840B;
+    background: ;
     box-shadow: none;
 }
 
 button {
-    background: #966600;
+    background: ;
+    color:white;
 }
 
 div.message {

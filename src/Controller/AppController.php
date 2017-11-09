@@ -49,17 +49,17 @@ class AppController extends Controller
                     'controller' => 'Users',
                     'action' => 'login'
                 ],
-                'logoutAction' => [
-                    'controller' => 'Users',
-                    'action' => 'logout'
-                ],
                 'authError' => 'Did you really think you are allowed to see that?',
                 'authenticate' => [
                     'Form' => [
                         'fields' => ['username' => 'email', 'password'=>'password']
                     ]
                 ],
-                'storage' => 'Session'
+                'storage' => 'Session',
+                'loginRedirect' => [
+                    'controller' => 'dashboard',
+                    'action' => 'dashboard'
+                                    ]
         ]);
 
         /*
