@@ -64,10 +64,10 @@
 }
 #responsive-admin-menu #menu a {
 	border-bottom: 1px dotted #52535a;
-	font-size: 14px;
+	font-size: 20px;
 	text-decoration: none;
 	display: block;
-	padding: 12px;
+	padding: 25px;
 	color: #FFFFFF;
 	position: relative;
 	font-weight: 400;

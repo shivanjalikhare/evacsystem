@@ -1,13 +1,5 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
- */
-?>
 
 <?php echo $this->element('sidemenus\side_menu_logged_in'); ?>
-
-
 
 <html>
 <head>
@@ -27,8 +19,7 @@ ol {
   margin: 0;
   padding: 0;
   list-style-type: none;
-        margin-left: 370px;
-    width: 1140px;
+    
 }
 
 /* Style the list items */
@@ -97,8 +88,6 @@ ol li.checked::before {
   padding: 30px 40px;
   color: white;
   text-align: center;
-      margin-left: 334px;
-    width: 1200px;
 }
 
 /* Clear floats after the header */
@@ -136,81 +125,82 @@ input {
 </style>
 </head>
 <body>
+  <div id ="content-wrapper">
+    <div id="myDIV" class="header">
+      <h2 style="margin:5px">Emergency Checklist</h2>
+      <input type="text" id="myInput" placeholder="Remind me..">
+      <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
 
-<div id="myDIV" class="header">
-  <h2 style="margin:5px">Emergency Checklist</h2>
-  <input type="text" id="myInput" placeholder="Remind me..">
-  <span onclick="newElement()" class="addBtn">Add</span>
-</div>
+    <ol id="myUL">
+        <li>Take Medicines</li>
+        <li>Credit cards, Passport and other Documents</li>
+        <li>Special items for infants, elderly or
+      disabled family members.</li>
+        <li>Blankets or sleeping bags</li>
+        <li>A change of clothing, rain gear and
+      sturdy shoes</li>
+        <li>emergency telephone numbers</li>
+    </ol>
+  </div>
 
-<ol id="myUL">
-  <li>Take Medicines</li>
-  <li>Credit cards, Passport and other Documents</li>
-  <li>Special items for infants, elderly or
-disabled family members.</li>
-  <li>Blankets or sleeping bags</li>
-  <li>A change of clothing, rain gear and
-sturdy shoes</li>
-  <li>emergency telephone numbers</li>
-</ol>
+    <script>
+      // Create a "close" button and append it to each list item
+      var myNodelist = document.getElementsByTagName("LI");
+      var i;
+      for (i = 0; i < myNodelist.length; i++) {
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        myNodelist[i].appendChild(span);
+      }
 
-<script>
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
+      // Click on a close button to hide the current list item
+      var close = document.getElementsByClassName("close");
+      var i;
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
 
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
+      // Add a "checked" symbol when clicking on a list item
+      var list = document.querySelector('ul');
+      list.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'LI') {
+          ev.target.classList.toggle('checked');
+        }
+      }, false);
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+      // Create a new list item when clicking on the "Add" button
+      function newElement() {
+        var li = document.createElement("li");
+        var inputValue = document.getElementById("myInput").value;
+        var t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === '') {
+          alert("You must write something!");
+        } else {
+          document.getElementById("myUL").appendChild(li);
+        }
+        document.getElementById("myInput").value = "";
 
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}
-</script>
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+          }
+        }
+      }
+    </script>
 
 </body>
 </html>

@@ -1,68 +1,162 @@
-<?php
-/**
- * @var \App\View\AppView $this
- */
-?>
-<!--<?php echo $this->element('sidemenus\side_menu_logged_out'); ?>
--->
+<html>
+  <head>
 
-<div class="users form large-9 medium-8 columns content">
-   
-
-<?= $this->Form->create($user) ?>
-  <fieldset>
-    <legend>
-      Signup
-      <button class="btn btn-success" style="margin-left:550px; padding:15px; color:white; text-decoration: none;">
-        <?php echo $this->Html->link('Go Back Home',['action'=>'login']); ?></button>
-    </legend>
+    <!---- include jquery file and stylesheets-->  
+    <script src="http://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/nivo-lightbox.css" rel="stylesheet" />
+    <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="color/default.css" rel="stylesheet">
+    <!-- end -->
     
+  </head>
 
-    <div class="form-group">  
-      <div class="col-lg-10">
-        <?php echo $this->Form->control('email',['placeholder'=>'Enter your email', 'class'=>'form-control']) ?>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    <!-- Navigation -->
+    <div id="navigation">
+      <nav class="navbar navbar-custom" role="navigation">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2 mob-logo">
+              <div class="row">
+                <div class="site-logo">
+                  <?php echo $this->html->image('logo.jpg', array('alt'=>'','width'=>'120px','height'=>'80px'));?>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-10 mob-menu">
+              <div class="row">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu"><i class="fa fa-bars"></i></button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="menu">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="login"><span class="fa fa-hand-o-down"style="color:#ff9900;"></span>&nbsp&nbsp&nbspAbout Us</a></li>
+                    <li><a href="login"><span class="fa fa-info-circle"style="color:#ff9900;"></span>&nbsp&nbsp&nbspServices</a></li>
+                    <li><a href="login"><span class="fa fa-users"style="color:#ff9900;"></span>&nbsp&nbsp&nbspLogin</a></li>
+                    <li><a href="#signupform"><span class="fa fa-pencil"style="color:#ff9900;"></span>&nbsp&nbsp&nbspSign Up</a></li>
+                  </ul>
+                </div>
+                <!-- /.Navbar-collapse -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.container -->
+      </nav>
+    </div>
+    <!-- /Navigation -->
+
+    <!--sign up form-->
+    <section id="#signupform" class="home-section nopadd-bot color-dark bg-white text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
+              <div class="section-heading text-center">
+                <h2 class="h-bold"><span class="fa fa-pencil"style="color:#ff9900;"></span>&nbsp&nbsp&nbspSign Up</h2>
+                <div class="divider-header"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="panel-body">
+          <div class="users form large-9 medium-8 columns content">
+            <?= $this->Form->create($user) ?> 
+                <div class="form-group">  
+                    <?php echo $this->Form->control('email',['placeholder'=>'Enter your email', 'class'=>'form-control']) ?>
+                </div>
+
+                <div class="form-group">
+                    <?php echo $this->Form->control('phone',['placeholder'=>'Enter your phone number', 'class'=>'form-control']) ?>
+                </div>
+
+                <div class="form-group">
+                    <?php $options = array(
+                      '1' =>'Individual',
+                      '2' => 'Volunteer',
+                      '3' => 'Organization'
+                    );
+                    echo $this->Form->control('Type of User', array('options' => $options, 'class'=>'form-control'));
+                    ?>
+                </div>
+
+                <div class="form-group">
+                    <?php echo $this->Form->control('password',['type'=>'password', 'placeholder'=>'Enter your password', 'class'=>'form-control']) ?>
+                </div>
+
+                <div class="form-group">
+                    <?php echo $this->Form->control('Confirm password',['type'=>'password', 'placeholder'=>'Enter your password again', 'class'=>'form-control', 'required'=>'required']) ?>
+                </div>
+
+                <div class="form-group">
+                    <?= $this->Form->button(__('Signup'),['class'=>'btn btn-primary'])?>
+                </div>
+            <?= $this->Form->end() ?>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end signup form-->
+
+    <!-- Section: parallax 1 -->
+    <section id="parallax1" class="home-section parallax text-light" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-center">
+              <h2 class="big-heading highlight-dark wow bounceInDown" data-wow-delay="0.2s">Lets Prepare and Stay Aware !</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+
+          <div class="text-center">
+            <a href="#signupform" class="totop"><i class="fa fa-arrow-up" style="color:#ff9900;"></i></a>
+            <p>&copy;<b>DES</b>&nbsp&nbsp<i>Disaster Evacuation System</i>. &nbsp&nbsp All Rights Reserved</p>
+          </div>
+        </div>
       </div>
     </div>
+  </footer>
 
-    <div class="form-group">
-      <div class="col-lg-10">
-        <?php echo $this->Form->control('phone',['placeholder'=>'Enter your phone number', 'class'=>'form-control']) ?>
-      </div>
-    </div>
+  <!-- core js files-->
+  <?= $this->Html->script('jquery.sticky.js') ?>
+  <?= $this->Html->script('slippry.min.js') ?>
+  <?= $this->Html->script('jquery.flexslider-min.js') ?>
+  <?= $this->Html->script('morphext.min.js') ?>
+  <?= $this->Html->script('gmap.js') ?>
+  <?= $this->Html->script('jquery.mb.YTPlayer.js') ?>
+  <?= $this->Html->script('jquery.easing.min.js') ?>
+  <?= $this->Html->script('jquery.scrollTo.js') ?>
+  <?= $this->Html->script('jquery.appear.js') ?>
+  <?= $this->Html->script('stellar.js') ?>
+  <?= $this->Html->script('wow.min.js') ?>
+  <?= $this->Html->script('owl.carousel.min.js') ?>
+  <?= $this->Html->script('nivo-lightbox.min.js') ?>
+  <?= $this->Html->script('jquery.nicescroll.min.js') ?>
+  <?= $this->Html->script('custom.js') ?>
+  <?= $this->Html->script('contactform.js"') ?>
 
-    <div class="form-group">
-      <div class="col-lg-10">
-        <?php $options = array(
-          '1' =>'Individual',
-          '2' => 'Volunteer',
-          '3' => 'Orgainization'
-        );
-        echo $this->Form->input('Type of User', array('options' => $options));
-        ?>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="col-lg-10">
-        <?php echo $this->Form->control('password',['type'=>'password', 'placeholder'=>'Enter your password', 'class'=>'form-control']) ?>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="col-lg-10">
-        <?php echo $this->Form->control('Confirm password',['type'=>'password', 'placeholder'=>'Enter your password again', 'class'=>'form-control', 'required'=>'required']) ?>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <?= $this->Form->button(__('Signup'),['class'=>'btn btn-primary'])?>
-      </div>
-    </div>
-  </fieldset>
-<?= $this->Form->end() ?>
-
-<?php
+  </body>
+</html>
  
 
 
