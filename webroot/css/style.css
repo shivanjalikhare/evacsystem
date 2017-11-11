@@ -83,6 +83,8 @@ h1.font-light,h2.font-light,h3.font-light,h4.font-light,h5.font-light,h6.font-li
 
 p {
     margin: 0 0 20px;
+    text-align: justify;
+    font-size: 15px;
 
 }
 
@@ -193,7 +195,7 @@ blockquote strong {
 
 
 .navbar-custom ul.nav li a {
-	font-size: 12px;
+	font-size: 17px;
 	letter-spacing: 1px;
     color: #444;
 	text-transform: uppercase;

@@ -59,6 +59,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
     $routes->connect('/delete', ['controller' => 'Users', 'action' => 'delete']);
     $routes->connect('/dashboard', ['controller' => 'Users', 'action' => 'dashboard']);
+    $routes->connect('/dashboard/resetpw',['controller' => 'Users', 'action' => 'sendResetEmail']);
     $routes->connect('/users/add', ['controller' => 'Users', 'action' => 'add']);
     $routes->connect('/users/view', ['controller' => 'Users', 'action' => 'view']);
     $routes->connect('/users/index', ['controller' => 'Users', 'action' => 'index']);
