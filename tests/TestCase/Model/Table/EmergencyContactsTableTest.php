@@ -61,16 +61,29 @@ class EmergencyContactsTableTest extends TestCase
         $this->markTestIncomplete('Not implemented yet.');
     }
 
-    /**
+	 /**
      * Test validationDefault method
      *
      * @return void
      */
     public function testValidationDefault()
     {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
+        // mock input data
+        $data = [
+        'etype' => 'transport',
+        'name' => 'Lafayette Evacuation Transport System',
+        'phone' => '3374531208',
+        'email' => 'thomas.eden@gmail.com',
+        'Address' => '254 east lewis street, Lafayette, LA - 70503'
+        ];
 
+        // create new object/data to check validation
+        $emergencycontacts = $this->EmergencyContacts->newEntity($data);
+
+        // no errors
+        $this->assertEmpty($emergencycontacts->errors());
+    }
+	
     /**
      * Test buildRules method
      *
