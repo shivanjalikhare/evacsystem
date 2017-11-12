@@ -40,10 +40,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="menu">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#about"><span class="fa fa-hand-o-down"style="color:#ff9900;"></span>&nbsp&nbsp&nbspAbout Us</a></li>
-                    <li><a href="#service"><span class="fa fa-info-circle"style="color:#ff9900;"></span>&nbsp&nbsp&nbspServices</a></li>
-  				          <li><a href="#login"><span class="fa fa-users"style="color:#ff9900;"></span>&nbsp&nbsp&nbspLogin</a></li>
-                    <li><a href="signup"><span class="fa fa-pencil"style="color:#ff9900;"></span>&nbsp&nbsp&nbspSign Up</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#service">Services</a></li>
+  				          <li><a href="#login">Login</a></li>
+                    <li><a href="signup">Sign Up</a></li>
                   </ul>
                 </div>
                 <!-- /.Navbar-collapse -->
@@ -65,7 +65,7 @@
             <div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
               <div class="section-heading text-center">
   			
-                <h2 class="h-bold"><span class="fa fa-hand-o-down"style="color:#ff9900;"></span>&nbsp&nbsp&nbsp About Us</h2>
+                <h2 class="h-bold"><span class="fa fa-hand-o-down"style="color:#ff9900;"></span>&nbsp&nbsp&nbsp About</h2>
                 <div class="divider-header"></div>
                 <p>Working together to ensure that Louisiana is prepared to respond to emergencies, recover from them, and mitigate against their impacts. We coordinate assistance provided to individuals, households, and businesses recovering from disaster or emergency impacts.</p>
               </div>
@@ -158,9 +158,9 @@
                     <span class="fa fa-home fa-5x"style="color:#009900;"></span>
                   </div>
                   <div class="service-desc">
-                    <h5>Shelter</h5>
+                    <h5>Safe Shelter</h5>
                     
-                      <p>If an emergency has forced you to evacuate your home, If you need our help, come to the shelter. When you arrive, please let us know if you have any specific needs or requests for equipment, supplies or food requirements. Every effort will be made to accommodate your needs.</p>
+                      <p>Ad denique euripidis signiferumque vim, iusto admodum quo cu. No tritani neglegentur mediocritatem duo.</p>
                     
                     
                   </div>
@@ -174,9 +174,9 @@
                     <span class="fa fa-building-o fa-5x"style="color:#cc9900;"></span>
                   </div>
                   <div class="service-desc">
-                    <h5>Storage</h5>
+                    <h5>Safe Storage</h5>
                     
-                      <p> Are you inflicted with damage to property? We will help you in mobilizing your belongings quickly. In addition to providing self-storage, supplies are provided to help with disaster recovery, temperature-controlled sample transportation, including boxes, tarps, propane and propane tanks.</p>
+                      <p> denique euripidis signiferumque vim, iusto admodum quo cu. No tritani neglegentur mediocritatem duo.</p>
                     
                     
                   </div>
@@ -192,8 +192,7 @@
                   <div class="service-desc">
                     <h5>Transportation</h5>
                     
-                      <p>We provide transportation in the vicinity of the disaster for who cannot drive or who do not have a vehicle. Our Support includes accessible vehicles
-(e.g., lift-equipped or vehicles suitable for transporting individuals who use oxygen).</p>
+                      <p>Ad denique euripidis signiferumque vim, iusto admodum quo cu. No tritani neglegentur mediocritatem duo.</p>
                     
                     
                   </div>
@@ -209,7 +208,7 @@
                   <div class="service-desc">
                     <h5>Medical Aid</h5>
                     
-                      <p>We provide immediate medical help needed for you. We provide services that include personal health monitoring, transportation of medicines and other emergency first-aid treatment for the evacuees.</p>
+                      <p>Ad denique euripidis signiferumque vim, iusto admodum quo cu. No tritani neglegentur mediocritatem duo.</p>
                     
                    
                   </div>
@@ -276,13 +275,13 @@
 			    			<?php
 			    			echo $this->Form->control('password');
 			    			?>
-			    		</div> 
-              <div class="form-group">
-			    		   <?= $this->Form->button(__('Submit'),['class'=>"btn btn-lg btn-success"]) ?>
-              </div>
-			    		<div>
-                <h6>Are you a new user ? Register Here <span class="fa fa-arrow-right"style="color:#ff9900;"></span> <a href="signup"><button class="btn btn-lg btn-primary">Sign Up</button></a></h6>
-			    		</div>
+			    		</div> 			    	
+			    		<?= $this->Form->button(__('Submit'),['class'=>"btn btn-lg btn-success btn-block"]) ?>
+			    		<br><br>
+			    		<span style="margin-left:160px;">
+			    			<!--<?php echo $this->Html->link('New User? Sign Up Here',['controller'=>'users', 'action'=>'signup']); ?> &nbsp&nbsp&nbsp-->
+                <h6><a href=""> New User? Sign Up Here </a></h6>
+			    		</span>
 			    	</fieldset>
 			      	<?= $this->Form->end() ?>
 		</div>

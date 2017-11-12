@@ -60,7 +60,10 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/users/view', ['controller' => 'Users', 'action' => 'view']);
     $routes->connect('/users/index', ['controller' => 'Users', 'action' => 'index']);
     $routes->connect('/users/emergency', ['controller' => 'EmergencyContacts', 'action' => 'index']);
-
+    $routes->connect('/users/markers', ['controller' => 'Markers', 'action' => 'index']);
+    $routes->connect('/users/locations', ['controller' => 'Locations', 'action' => 'index']);
+    $routes->connect('/markers/view', ['controller' => 'Markers', 'action' => 'view']);
+    //$routes->connect('/users/locations/markers', ['controller' => 'Markers', 'action' => 'index']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
