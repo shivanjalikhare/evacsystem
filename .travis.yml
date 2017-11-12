@@ -8,15 +8,12 @@ php:
   - hhvm
 
 before_script: 
-- "composer require codeclimate/php-test-reporter --dev"
 - "composer install"
 
 script: 
-- "phpunit --testsuite=unit --coverage-text --coverage-clover build/logs/clover.xml"
+- "php phpunit-6.4.3.phar 
+C:\xampp\htdocs\cake-auth\tests\TestCase\Controller\UsersControllerTest.php --coverage-text --coverage-clover build/logs/clover.xml"
 
-after_script:
-- CODECLIMATE_REPO_TOKEN="7a6e74eb14a9982fbf164052801463ab30e71e09f8473176c3f348c779075759 " vendor/bin/test-reporter --stdout > codeclimate.json
-- "sh -c 'if [ \"$TRAVIS_PHP_VERSION\" != \"hhvm\" ]; then curl -X POST -d @codeclimate.json -H \"Content-Type: application/json\" -H \"User-Agent: Code Climate (PHP Test Reporter v0.1.1)\" https://codeclimate.com/test_reports  ; fi'"
  
 
 
