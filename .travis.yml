@@ -1,11 +1,10 @@
 language: php,
-  php: 7.1.1,
-  sudo: false,
+  php: 7.1.1
+  sudo: false
   install: 
-    "composer self-update",
-    "composer install --prefer-dist"
-  
-  
+    -composer self-update
+    -composer install --prefer-dist
+ 
   addons: 
     chrome: beta 
     before_install: 
@@ -13,7 +12,7 @@ language: php,
   - /Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --remote-debugging-port=9222 http://localhost &"
   
   before_script: 
-   -phpenv rehash,
+   -phpenv rehash
    -set +H
   
   script: 
