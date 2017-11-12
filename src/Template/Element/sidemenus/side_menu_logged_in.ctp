@@ -22,8 +22,7 @@
                 <!-- Media Sub Menu -->
                     <div id="media-sub" style="display: none;">
                         <?= $this->Html->link(__('Emergency Checklist'), ['action' => 'checklist'], array('class'=>'icon-dashboard')); ?>
-                        <a href="" title="Safe Route"><i class="icon-film"></i><span>  
-                        Safe Route</span></a>
+                        <a><?= $this->Html->link(__('Safe Shelter Information'), ['controller' => 'Markers', 'action' => 'view']) ?></a>
                         <a href="" title="Safe Storage"><i class="icon-picture"></i><span>  
                         Safe Storage</span></a>
                     </div>

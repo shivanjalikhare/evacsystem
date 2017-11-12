@@ -59,13 +59,12 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
     $routes->connect('/delete', ['controller' => 'Users', 'action' => 'delete']);
     $routes->connect('/dashboard', ['controller' => 'Users', 'action' => 'dashboard']);
-    $routes->connect('/dashboard/resetpw',['controller' => 'Users', 'action' => 'sendResetEmail']);
     $routes->connect('/users/add', ['controller' => 'Users', 'action' => 'add']);
     $routes->connect('/users/view', ['controller' => 'Users', 'action' => 'view']);
     $routes->connect('/users/index', ['controller' => 'Users', 'action' => 'index']);
     $routes->connect('/users/markers', ['controller' => 'Markers', 'action' => 'index']);
     $routes->connect('/users/locations', ['controller' => 'Locations', 'action' => 'index']);
-    $routes->connect('/users/markers/view', ['controller' => 'Markers', 'action' => 'view']);
+    $routes->connect('/markers/view', ['controller' => 'Markers', 'action' => 'view']);
     //$routes->connect('/users/locations/markers', ['controller' => 'Markers', 'action' => 'index']);
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
