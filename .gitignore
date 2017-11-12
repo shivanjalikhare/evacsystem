@@ -1,11 +1,9 @@
 # CakePHP specific files #
 ##########################
-/config/app.php
 /config/.env
 /tmp/*
 /logs/*
 /tmp/*
-/vendor/*
 
 # OS generated files #
 ######################
@@ -32,3 +30,9 @@ Thumbs.db
 nbproject/* # NetBeans
 .vscode # Visual Studio Code
 .sass-cache/ # Sass preprocessor
+src/Controller/UsersController.php
+src/Controller/UsersController.php
+src/Template/Element/sidemenus/side_menu_logged_in.ctp
+src/Template/Users/dashboard.ctp
+src/Template/Users/login.ctp
+tests/Fixture/UsersFixture.php

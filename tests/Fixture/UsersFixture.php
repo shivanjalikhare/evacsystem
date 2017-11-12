@@ -40,28 +40,13 @@ class UsersFixture extends TestFixture
      * @var array
      */
     public $records = [
-            ['id' => 1,
-            'email' => 'Lorem ipsum dolor sit amet',
-            'password' => 'Lorem ipsum dolor sit amet',
-            'phone' => 'Lorem ipsum dolor sit amet',
+        [
+            'id' => 1,
+            'email' => 'razin2good@gmail.com',
+            'password' => '123456',
+            'phone' => '3374428237',
             'created' => '2017-10-14 00:01:56',
             'modified' => '2017-10-14 00:01:56'
-        ],
-        [
-            'id' => 2,
-            'username' => 'jane.doe',
-            'password' => 'loremipsum',
-            'phone' => 'Lorem ipsum dolor sit amet',
-            'created' => '2015-08-08 20:51:50',
-            'modified' => '2015-08-08 20:51:50'
-        ],
-        [
-            'id' => 3,
-            'username' => 'jack.doe',
-            'password' => 'loremipsum',
-            'phone' => 'Lorem ipsum dolor sit amet',
-            'created' => '2015-08-08 20:51:50',
-            'modified' => '2015-08-08 20:51:50'
         ],
     ];
 }
