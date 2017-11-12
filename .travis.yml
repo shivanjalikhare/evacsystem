@@ -9,11 +9,6 @@ install:
     -composer self-update
     -composer install --prefer-dist
  
-addons: 
-  chrome: beta 
-    # start your web application and listen on `localhost`
-    
-before_install: /Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --remote-debugging-port=9222 http://localhost &"
   
 before_script: composer install
   
@@ -21,8 +16,6 @@ script: php phpunit-6.4.3.phar evacsystem/tests/TestCase/Controller/UsersControl
     
 after_success: bash <(curl -s https://codecov.io/bash)
   
-global_env: DEFAULT=1
-group: stable
-dist: precise
+
  
 
