@@ -1,35 +1,29 @@
-{
-  "language": "php",
-  "php": 7.1.1,
-  "sudo": false,
-  "install": [
+language: php,
+  php: 7.1.1,
+  sudo: false,
+  install: 
     "composer self-update",
     "composer install --prefer-dist"
-  ],
   
-  "addons": [
-  "chrome": [
-    "beta" 
-    "before_install": [
+  
+  addons: 
+    chrome: beta 
+    before_install: [
   - # start your web application and listen on `localhost`
-  - "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --remote-debugging-port=9222 http://localhost &"
-  ]
-  ]
-  ],
-  "before_script": [
-    "phpenv rehash",
-    "set +H"
-  ],
-  "script": [
-    "php phpunit-6.4.3.phar 
-evacsystem/tests/TestCase/Controller/UsersControllerTest.php
-"
-  ],
-  "after_success": [
-    "bash <(curl -s https://codecov.io/bash)"
-  ],
-  "global_env": "DEFAULT=1",
-  "group": "stable",
-  "dist": "precise",
-  "os": "linux"
-}
+  - /Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --remote-debugging-port=9222 http://localhost &"
+  
+  before_script: 
+   -phpenv rehash,
+   -set +H
+  
+  script: 
+    -php phpunit-6.4.3.phar evacsystem/tests/TestCase/Controller/UsersControllerTest.php
+    
+  after_success: 
+   -bash <(curl -s https://codecov.io/bash)
+  
+  global_env: DEFAULT=1
+  group: stable
+  dist: precise
+ 
+
