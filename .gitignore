@@ -36,3 +36,4 @@ src/Template/Element/sidemenus/side_menu_logged_in.ctp
 src/Template/Users/dashboard.ctp
 src/Template/Users/login.ctp
 tests/Fixture/UsersFixture.php
+vendor/cakephp-fr/openweathermap/
