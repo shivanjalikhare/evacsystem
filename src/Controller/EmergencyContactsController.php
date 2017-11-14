@@ -42,6 +42,26 @@ class EmergencyContactsController extends AppController
         $this->set('emergencyContact', $emergencyContact);
         $this->set('_serialize', ['emergencyContact']);
     }
+	
+	public function sendEmail($user_email)
+    {
+      
+        $email = new Email();
+        $email->viewVars(['value' => 12345]);       
+        
+        $email
+            ->template('emergency')
+            ->emailFormat('html')
+            ->to($user_email)
+            ->send();   
+
+        $this->Flash->success(__('Email sent.'));
+
+        return $this->redirect(['controller'=>'EmergencyContacts','action' => 'index']);
+
+    }
+	
+	
 
     /**
      * Add method
