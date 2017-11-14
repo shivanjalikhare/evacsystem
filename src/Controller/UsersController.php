@@ -129,7 +129,10 @@ class UsersController extends AppController
     public function forgotPassword(){
         //empty
     }
-
+    
+    public function forecast(){
+        //empty
+    }
 
     /**
      * Edit method
