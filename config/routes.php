@@ -63,7 +63,11 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/users/markers', ['controller' => 'Markers', 'action' => 'index']);
     $routes->connect('/users/locations', ['controller' => 'Locations', 'action' => 'index']);
     $routes->connect('/markers/view', ['controller' => 'Markers', 'action' => 'view']);
-    //$routes->connect('/users/locations/markers', ['controller' => 'Markers', 'action' => 'index']);
+    $routes->connect('/dashboard',['controller' => 'Users', 'action' => 'dashboard']);
+    $routes->connect('/weather', ['controller' => 'Users','action' => 'weather']);
+    $routes->connect('/forecast', ['controller' => 'Users','action' => 'forecast']);
+    $routes->connect('/storagemarkers/view', ['controller' => 'Storagemarkers', 'action' => 'view']);
+   
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
@@ -95,3 +99,4 @@ Router::scope('/', function (RouteBuilder $routes) {
  * how to customize the loading of plugin routes.
  */
 Plugin::routes();
+
