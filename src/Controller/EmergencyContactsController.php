@@ -47,11 +47,13 @@ class EmergencyContactsController extends AppController
     {
       
         $email = new Email();
-        $email->viewVars(['value' => 12345]);       
-        
+        $email->viewVars(['value' => 12345]);  
+  
         $email
             ->template('emergency')
             ->emailFormat('html')
+            ->subject(sprintf('Emergency Attention %s', $user_email))
+            ->viewVars(['username'=>$user_email ,'useremail'=>$user_email])
             ->to($user_email)
             ->send();   
 
