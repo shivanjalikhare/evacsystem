@@ -15,9 +15,7 @@ class EmergencyContactsControllerTest extends IntegrationTestCase
      *
      * @var array
      */
-    public $fixtures = [
-        'app.emergency_contacts'
-    ];
+    public $fixtures = ['app.emergency_contacts'];
 
     /**
      * Test index method
@@ -26,17 +24,20 @@ class EmergencyContactsControllerTest extends IntegrationTestCase
      */
     public function testIndex()
     {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
+        //$this->markTestIncomplete('Not implemented yet.');
+        $this->session([ //mock user session
+        'Auth' => [
+            'User' => [
+                'id' => 1,
+                // other keys.
+            ]
+        ]
+        ]);
+    
+        $this->get('/users/emergency');
+        // Check that the response was a 200
+        $this->assertResponseOk();
 
-    /**
-     * Test view method
-     *
-     * @return void
-     */
-    public function testView()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
     }
 
     /**
@@ -44,28 +45,61 @@ class EmergencyContactsControllerTest extends IntegrationTestCase
      *
      * @return void
      */
+    public function testsendEmail()
+    {
+        //$this->markTestIncomplete('Not implemented yet.');
+        $this->enableRetainFlashMessages();
+        $this->session([ //mock user session
+            'Auth' => [
+                'User' => [
+                'id' => 1,
+                // other keys.
+                ]
+            ]
+        ]);
+        $this->get('/users'); //get the list of users
+        $this->assertSession(1, 'Auth.User.id'); //check if the user is logged in
+
+        $emailObject = new EmergencyContactsController();
+        $emailObject->sendEmail('razin2good@gmail.com');
+        $this->assertSession('Email sent.', 'Flash.flash.0.message');
+
+    }
+
+    /**
+     * Test add method
+     *
+     * @test
+     */
     public function testAdd()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        
+        $this->session([ //mock user session
+        'Auth' => [
+            'User' => [
+                'id' => 1,
+                // other keys.
+            ]
+        ]
+        ]);
+    
+        $this->get('/users/emergency');
+        // Check that the response was a 200
+        $this->assertResponseOk();
+
+        $data = [
+        'eid' => 15,
+        'etype' => 'qwerty@gmail.com',
+        'name' => 'qwerty',
+        'phone' => '123456',
+        'email' => 'axz@gmail.com',
+        'Address'=> '200 East Lewis Street'
+        ];
+        $this->post('/users/emergency/add', $data);
+
+        // Check for a 2xx response code
+        $this->assertResponseSuccess();
+
     }
 
-    /**
-     * Test edit method
-     *
-     * @return void
-     */
-    public function testEdit()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test delete method
-     *
-     * @return void
-     */
-    public function testDelete()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
 }
