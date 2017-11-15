@@ -6,17 +6,17 @@
  * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
  */
 ?> 
-<div class="container marginbot-50 home-section color-dark bg-white">
+<div class="container marginbot-50 home-section color-dark">
     
         
         <div class="container">
             <h3 class="h-bold"><?= __('Users') ?></h3>
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover bg-white">
                 <thead>
                     <tr>
-                        <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('phone') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('Type') ?></th>
+                        <th scope="col"><?= __('email') ?></th>
+                        <th scope="col"><?= __('phone') ?></th>
+                        <th scope="col"><?= __('Type') ?></th>
                      </tr>
                 </thead>
                 <tbody>

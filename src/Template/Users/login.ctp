@@ -206,16 +206,14 @@
 	<div class="container">
 		<div class="panel-body">
 						<?= $this->Form->create() ?>
-            <fieldset>
 			    	  	<div class="form-group">
 			    		    <?php 
-			    		    echo $this->Form->control('email'); 
-			    		    ?>
+			    		    echo $this->Form->control('email',['placeholder'=>'Enter your email', 'class'=>'form-control']) ?> 
+			    		    
 			    		</div>
 			    		<div class="form-group">
 			    			<?php
-			    			echo $this->Form->control('password');
-			    			?>
+			    			echo $this->Form->control('password',['type'=>'password', 'placeholder'=>'Enter your password', 'class'=>'form-control']) ?>
 			    		</div> 
               <div class="form-group">
 			    		   <?= $this->Form->button(__('Submit'),['class'=>"btn btn-lg btn-success"]) ?>
@@ -223,7 +221,6 @@
 			    		<div>
                 <h6>Are you a new user ? Register Here <span class="fa fa-arrow-right"style="color:#ff9900;"></span> <a href="signup"><button class="btn btn-lg btn-primary">Sign Up</button></a></h6>
 			    		</div>
-			    	</fieldset>
 			      	<?= $this->Form->end() ?>
 		</div>
 	</div>

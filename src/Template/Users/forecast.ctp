@@ -2,7 +2,7 @@
 <html> 
     <head>
         
-        	<div class="container marginbot-50 home-section color-dark bg-white">
+        	<div class="container marginbot-50 home-section color-dark">
         		<h2 class="h-bold">Weather Forecast</h2>
 				<a href="https://www.accuweather.com/en/us/new-york-ny/10007/current-weather/349727" class="aw-widget-legal">
 				<!--
