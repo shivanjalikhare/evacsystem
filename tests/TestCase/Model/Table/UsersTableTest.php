@@ -5,6 +5,7 @@ use App\Model\Table\UsersTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
+
 /**
  * App\Model\Table\UsersTable Test Case
  */
@@ -58,7 +59,21 @@ class UsersTableTest extends TestCase
      */
     public function testInitialize()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        
+        $this->Users->initialize([]); //have to call manually to get coverage.
+        $this->assertEquals(
+            'id',
+            $this->Users->primaryKey(),
+            'The [Users]Table default primary key is expected to be `id`.'
+        );
+        $expectedBehaviors = 'Timestamp';
+        $this->assertTrue(
+                $this->Users->behaviors()->has($expectedBehaviors),
+                "Cursory sanity check. The [Users]Table table is expected to use the $expectedBehaviors behavior."
+            );
+       
+
+        
     }
 
     /**
@@ -68,7 +83,33 @@ class UsersTableTest extends TestCase
      */
     public function testValidationDefault()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        //using fixture
+        $data = [
+        'id' => 1,
+            'email' => 'razin2good@gmail.com',
+            'password' => '123456',
+            'phone' => '3374428237',
+            'created' => '2017-10-14 00:01:56',
+            'modified' => '2017-10-14 00:01:56'
+        ];
+        $user = $this->Users->newEntity($data);
+        $this->assertEmpty($user->errors());
+
+    }
+
+
+    /**
+     * Test validationDefault method
+     *
+     * @return void
+     */
+    public function testValidationDefault_CheckFields() {
+        $validator = new \Cake\Validation\Validator(); //object
+        $validator = $this->Users->validationDefault($validator);
+        $this->assertTrue($validator->hasField('id'));
+        $this->assertTrue($validator->hasField('email'));
+        $this->assertTrue($validator->hasField('phone'));
+        $this->assertTrue($validator->hasField('password'));  
     }
 
     /**
@@ -78,6 +119,12 @@ class UsersTableTest extends TestCase
      */
     public function testBuildRules()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+       $comment =  $this->Users->newEntity([
+            'email' => 'thomas.eden@gmail.com'
+            
+        ]);
+
+        $result = $this->Users->checkRules($comment);
+        $this->assertFalse($result);
     }
 }
