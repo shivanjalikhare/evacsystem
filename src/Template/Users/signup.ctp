@@ -1,65 +1,12 @@
+<?php echo $this->element('sidemenus\side_menu_logged_out'); ?>
+
 <html>
-  <head>
-
-    <!---- include jquery file and stylesheets-->  
-    <script src="http://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/nivo-lightbox.css" rel="stylesheet" />
-    <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
-    <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
-    <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
-    <link href="css/flexslider.css" rel="stylesheet" />
-    <link href="css/animate.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet">
-    <link href="color/default.css" rel="stylesheet">
-    <!-- end -->
-    
-  </head>
-
   <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-    <!-- Navigation -->
-    <div id="navigation">
-      <nav class="navbar navbar-custom" role="navigation">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-2 mob-logo">
-              <div class="row">
-                <div class="site-logo">
-                  <?php echo $this->html->image('logo.jpg', array('alt'=>'','width'=>'120px','height'=>'80px'));?>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-10 mob-menu">
-              <div class="row">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu"><i class="fa fa-bars"></i></button>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="menu">
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login"><span class="fa fa-hand-o-down"style="color:#ff9900;"></span>&nbsp&nbsp&nbspAbout Us</a></li>
-                    <li><a href="login"><span class="fa fa-info-circle"style="color:#ff9900;"></span>&nbsp&nbsp&nbspServices</a></li>
-                    <li><a href="login"><span class="fa fa-users"style="color:#ff9900;"></span>&nbsp&nbsp&nbspLogin</a></li>
-                    <li><a href="#signupform"><span class="fa fa-pencil"style="color:#ff9900;"></span>&nbsp&nbsp&nbspSign Up</a></li>
-                  </ul>
-                </div>
-                <!-- /.Navbar-collapse -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /.container -->
-      </nav>
-    </div>
-    <!-- /Navigation -->
 
     <!--sign up form-->
     <section id="#signupform" class="home-section nopadd-bot color-dark bg-white text-center">
       <div class="container">
-        <div class="row">
+        <div class="">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
               <div class="section-heading text-center">
@@ -72,7 +19,7 @@
       </div>
       <div class="container">
         <div class="panel-body">
-          <div class="users form large-9 medium-8 columns content">
+          
             <?= $this->Form->create($user) ?> 
                 <div class="form-group">  
                     <?php echo $this->Form->control('email',['placeholder'=>'Enter your email', 'class'=>'form-control']) ?>
@@ -83,6 +30,17 @@
                 </div>
 
                 <div class="form-group">
+                  <!--<?php 
+                    echo $this->Form->create('dropdown', array('name' => 'dropdown'));
+                    echo $this->Form->input('select', array('options' => array(
+                      '1' =>'Individual',
+                      '2' => 'Volunteer',
+                      '3' => 'Organization'), 'empty' => 'Select type of user', 'id' => 'selected', 'value' => 'selected')); 
+                    echo $this->Form->submit(); 
+
+                    ?>-->
+
+
                     <?php $options = array(
                       '1' =>'Individual',
                       '2' => 'Volunteer',
@@ -104,7 +62,7 @@
                     <?= $this->Form->button(__('Signup'),['class'=>'btn btn-primary'])?>
                 </div>
             <?= $this->Form->end() ?>
-          </div>
+          
         </div>
       </div>
     </section>
@@ -113,7 +71,7 @@
     <!-- Section: parallax 1 -->
     <section id="parallax1" class="home-section parallax text-light" data-stellar-background-ratio="0.5">
       <div class="container">
-        <div class="row">
+        <div class="">
           <div class="col-md-12">
             <div class="text-center">
               <h2 class="big-heading highlight-dark wow bounceInDown" data-wow-delay="0.2s">Lets Prepare and Stay Aware !</h2>
@@ -122,10 +80,12 @@
         </div>
       </div>
     </section>
+    <!--end of parallax 1-->
 
+    <!--footer-->
     <footer>
     <div class="container">
-      <div class="row">
+      <div class="">
         <div class="col-md-6 col-md-offset-3">
 
           <div class="text-center">
@@ -136,24 +96,7 @@
       </div>
     </div>
   </footer>
-
-  <!-- core js files-->
-  <?= $this->Html->script('jquery.sticky.js') ?>
-  <?= $this->Html->script('slippry.min.js') ?>
-  <?= $this->Html->script('jquery.flexslider-min.js') ?>
-  <?= $this->Html->script('morphext.min.js') ?>
-  <?= $this->Html->script('gmap.js') ?>
-  <?= $this->Html->script('jquery.mb.YTPlayer.js') ?>
-  <?= $this->Html->script('jquery.easing.min.js') ?>
-  <?= $this->Html->script('jquery.scrollTo.js') ?>
-  <?= $this->Html->script('jquery.appear.js') ?>
-  <?= $this->Html->script('stellar.js') ?>
-  <?= $this->Html->script('wow.min.js') ?>
-  <?= $this->Html->script('owl.carousel.min.js') ?>
-  <?= $this->Html->script('nivo-lightbox.min.js') ?>
-  <?= $this->Html->script('jquery.nicescroll.min.js') ?>
-  <?= $this->Html->script('custom.js') ?>
-  <?= $this->Html->script('contactform.js"') ?>
+  <!--end of footer-->
 
   </body>
 </html>

@@ -68,7 +68,18 @@ class UsersTableTest extends TestCase
      */
     public function testValidationDefault()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $data = [
+        'id' => 15,
+        'email' => 'qwerty@gmail.com',
+        'password' => 'qwerty',
+        'created' => time(),
+        'modified' => time()
+        ];
+
+
+        $user = $this->Users->newEntity($data);
+        $this->assertEmpty($user->errors());
+
     }
 
     /**

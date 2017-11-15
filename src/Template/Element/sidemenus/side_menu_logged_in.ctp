@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'> -->
+            <script  src="http://code.jquery.com/jquery-2.2.4.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <?= $this->Html->css('font-awesome.min.css') ?>
         <?= $this->Html->css('sidenavstyle.css') ?>
@@ -17,7 +19,7 @@
                 <br/>
                 <?= $this->Html->link(__('Profile'), ['controller'=>'users', 'action' => 'dashboard'], array('class'=>'icon-dashboard')); ?>
                 <?= $this->Html->link(__('List Users'), ['controller'=>'users', 'action' => 'index'], array('class'=>'icon-user')); ?>
-                <a href="" title="Services" class="submenu" name="media-sub"><i class="icon-eye-open"></i><span>  
+                <a href="#" title="Services" on click= "" class="submenu" name="media-sub"><i class="icon-eye-open"></i><span>  
                 Services</span></a>
                 <!-- Media Sub Menu -->
                     <div id="media-sub" style="display: none;">
@@ -28,7 +30,6 @@
                         Safe Storage</span></a>
                     </div>
                 <!-- Media Sub Menu -->
-                <?= $this->Html->link('Reset Password',['controller'=>'users', 'action'=>'sendResetEmail'], array('class'=>'icon-lock')); ?>
                 <?= $this->Html->link('Logout',['controller'=>'users', 'action'=>'logout'], array('class'=>'icon-signout')); ?>
         </div>
         <!--Menu-->
