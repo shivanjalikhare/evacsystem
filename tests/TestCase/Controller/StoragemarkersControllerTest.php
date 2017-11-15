@@ -1,15 +1,13 @@
 <?php
 namespace App\Test\TestCase\Controller;
 
-use App\Controller\MarkersController;
+use App\Controller\StoragemarkersController;
 use Cake\TestSuite\IntegrationTestCase;
-use App\Controller\UsersController;
-use Cake\ORM\TableRegistry;
 
 /**
- * App\Controller\MarkersController Test Case
+ * App\Controller\StoragemarkersController Test Case
  */
-class MarkersControllerTest extends IntegrationTestCase
+class StoragemarkersControllerTest extends IntegrationTestCase
 {
 
     /**
@@ -18,8 +16,7 @@ class MarkersControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'app.markers',
-        'app.users'
+        'app.storagemarkers', 'app.users'
     ];
 
     /**
@@ -42,12 +39,11 @@ class MarkersControllerTest extends IntegrationTestCase
         $this->get('/users'); //get the list of users
         $this->assertSession(1, 'Auth.User.id'); //check if the user is logged in
 
-        $this->get('/markers/view');
+        $this->get('/storagemarkers/view');
 
         $this->assertResponseOk();
              
 
     }
-
 
 }
