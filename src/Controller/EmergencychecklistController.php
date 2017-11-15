@@ -51,31 +51,7 @@ class EmergencychecklistController extends AppController
         
     }
 
-    /**
-     * Edit method
-     *
-     * @param string|null $id Emergencychecklist id.
-     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
-    public function edit($id = null)
-    {
-        $emergencychecklist = $this->Emergencychecklist->get($id, [
-            'contain' => []
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $emergencychecklist = $this->Emergencychecklist->patchEntity($emergencychecklist, $this->request->getData());
-            if ($this->Emergencychecklist->save($emergencychecklist)) {
-                $this->Flash->success(__('The emergencychecklist has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The emergencychecklist could not be saved. Please, try again.'));
-        }
-        $this->set(compact('emergencychecklist'));
-        $this->set('_serialize', ['emergencychecklist']);
-    }
-
+    
     /**
      * Delete method
      *
