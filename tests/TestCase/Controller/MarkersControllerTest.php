@@ -3,8 +3,11 @@ namespace App\Test\TestCase\Controller;
 
 use App\Controller\MarkersController;
 use Cake\TestSuite\IntegrationTestCase;
+
 use App\Controller\UsersController;
 use Cake\ORM\TableRegistry;
+
+
 
 /**
  * App\Controller\MarkersController Test Case
@@ -18,17 +21,35 @@ class MarkersControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
+
         'app.markers',
         'app.users'
     ];
 
     /**
+
+        'app.markers'
+    ];
+
+    /**
+     * Test index method
+     *
+     * @return void
+     */
+    public function testIndex()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+
      * Test view method
      *
      * @return void
      */
     public function testView()
     {
+
         
 
          // Set session data
@@ -53,4 +74,38 @@ class MarkersControllerTest extends IntegrationTestCase
         
 
 }
+
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test add method
+     *
+     * @return void
+     */
+    public function testAdd()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test edit method
+     *
+     * @return void
+     */
+    public function testEdit()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test delete method
+     *
+     * @return void
+     */
+    public function testDelete()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
 }

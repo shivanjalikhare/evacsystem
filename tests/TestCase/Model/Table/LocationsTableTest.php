@@ -68,6 +68,7 @@ class LocationsTableTest extends TestCase
      */
     public function testValidationDefault()
     {
+
         $data = [
         'id' => 15,
         'email' => 'qwerty@gmail.com',
@@ -78,6 +79,9 @@ class LocationsTableTest extends TestCase
 
         $locations = $this->Locations->newEntity($data);
         $this->assertEmpty($locations->errors());
+
+        $this->markTestIncomplete('Not implemented yet.');
+
     }
 
     /**
