@@ -23,11 +23,12 @@
                 Services</span></a>
                 <!-- Media Sub Menu -->
                     <div id="media-sub" style="display: none;">
-                        <?= $this->Html->link(__('Emergency Checklist'), ['action' => 'checklist'], array('class'=>'icon-dashboard')); ?>
-                        <a href="" title="Safe Route"><i class="icon-film"></i><span>  
-                        Safe Route</span></a>
-                        <a href="" title="Safe Storage"><i class="icon-picture"></i><span>  
-                        Safe Storage</span></a>
+                        <?= $this->Html->link(__('   Emergency Checklist'), ['action' => 'checklist'], array('class'=>'icon-dashboard')); ?>
+                        <?= $this->Html->link(__('   Safe Shelter Information'), ['controller' => 'Markers', 'action' => 'view']) ?>
+                        <?= $this->Html->link(__('   Emergency contact'), ['controller' => 'EmergencyContacts', 'action' => 'index']) ?>
+                        <?= $this->Html->link(__('   Weather Forecast'), ['controller' => 'Users','action' => 'forecast']) ?>
+                        <?= $this->Html->link(__('   Safe Storage Information'), ['controller' => 'Storagemarkers', 'action' => 'view']) ?>
+                         
                     </div>
                 <!-- Media Sub Menu -->
                 <?= $this->Html->link('Logout',['controller'=>'users', 'action'=>'logout'], array('class'=>'icon-signout')); ?>

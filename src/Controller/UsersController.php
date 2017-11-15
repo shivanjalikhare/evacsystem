@@ -129,10 +129,16 @@ class UsersController extends AppController
         //empty
     }
 
+
     public function forecast(){
         //empty
     }
 
+
+    
+    public function forecast(){
+        //empty
+    }
 
     /**
      * Edit method
