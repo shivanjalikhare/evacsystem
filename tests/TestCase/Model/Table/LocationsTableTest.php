@@ -58,7 +58,13 @@ class LocationsTableTest extends TestCase
      */
     public function testInitialize()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->Locations->initialize([]); //have to call manually to get coverage.
+        $this->assertEquals(
+            'id',
+            $this->Locations->primaryKey(),
+            'The [Users]Table default primary key is expected to be `id`.'
+        );
+
     }
 
     /**
@@ -68,19 +74,26 @@ class LocationsTableTest extends TestCase
      */
     public function testValidationDefault()
     {
-
         $data = [
-        'id' => 15,
-        'email' => 'qwerty@gmail.com',
-        'password' => 'qwerty',
-        'created' => time(),
-        'modified' => time()
+         'id' => 1,
+         'city' => 'Lafayette'
         ];
 
         $locations = $this->Locations->newEntity($data);
         $this->assertEmpty($locations->errors());
 
-        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test validationDefault method
+     *
+     * @return void
+     */
+    public function testValidationDefault_CheckFields() {
+        $validator = new \Cake\Validation\Validator(); //object
+        $validator = $this->Locations->validationDefault($validator);
+        $this->assertTrue($validator->hasField('id'));
+        $this->assertTrue($validator->hasField('city'));
 
     }
 
@@ -91,6 +104,12 @@ class LocationsTableTest extends TestCase
      */
     public function testBuildRules()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $comment =  $this->Locations->newEntity([
+            'city' => 'Lafayette'
+            
+        ]);
+
+        $result = $this->Locations->checkRules($comment);
+        $this->assertFalse($result);
     }
 }

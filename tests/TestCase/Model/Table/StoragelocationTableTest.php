@@ -58,7 +58,12 @@ class StoragelocationsTableTest extends TestCase
      */
     public function testInitialize()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->Storagelocation->initialize([]); //have to call manually to get coverage.
+        $this->assertEquals(
+            'id',
+            $this->Storagelocation->primaryKey(),
+            'The [Users]Table default primary key is expected to be `id`.'
+        );
     }
 
     /**
@@ -69,15 +74,25 @@ class StoragelocationsTableTest extends TestCase
     public function testValidationDefault()
     {
         $data = [
-        'id' => 15,
-        'email' => 'qwerty@gmail.com',
-        'password' => 'qwerty',
-        'created' => time(),
-        'modified' => time()
+            'id' => 1,
+            'city' => 'Lafayette'
         ];
 
         $storagelocation = $this->Storagelocation->newEntity($data);
         $this->assertEmpty($storagelocation->errors());
+    }
+
+    /**
+     * Test validationDefault method
+     *
+     * @return void
+     */
+    public function testValidationDefault_CheckFields() {
+        $validator = new \Cake\Validation\Validator(); //object
+        $validator = $this->Storagelocation->validationDefault($validator);
+        $this->assertTrue($validator->hasField('id'));
+        $this->assertTrue($validator->hasField('city'));
+         
     }
 
     /**
@@ -87,6 +102,12 @@ class StoragelocationsTableTest extends TestCase
      */
     public function testBuildRules()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $comment =  $this->Storagelocation->newEntity([
+            'city' => 'Lafayette'
+            
+        ]);
+
+        $result = $this->Storagelocation->checkRules($comment);
+        $this->assertFalse($result);
     }
 }

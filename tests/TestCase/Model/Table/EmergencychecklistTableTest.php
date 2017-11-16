@@ -58,7 +58,12 @@ class EmergencychecklistTableTest extends TestCase
      */
     public function testInitialize()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+         $this->Emergencychecklist->initialize([]); //have to call manually to get coverage.
+        $this->assertEquals(
+            'id',
+            $this->Emergencychecklist->primaryKey(),
+            'The [Emergencychecklist]Table default primary key is expected to be `id`.'
+        );
     }
 
     /**
@@ -68,6 +73,27 @@ class EmergencychecklistTableTest extends TestCase
      */
     public function testValidationDefault()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $data = [
+        'id' => 1,
+            'checklist' => 'Remember to keep medicines'
+        ];
+        $emergencychecklist = $this->Emergencychecklist->newEntity($data);
+        $this->assertEmpty($emergencychecklist->errors());
+
+        
+    }
+
+    /**
+     * Test validationDefault method
+     *
+     * @return void
+     */
+    public function testValidationDefault_CheckFields() {
+        
+        $validator = new \Cake\Validation\Validator(); //object
+        $validator = $this->Emergencychecklist->validationDefault($validator);
+        $this->assertTrue($validator->hasField('id'));
+        $this->assertTrue($validator->hasField('checklist'));
+
     }
 }

@@ -44,7 +44,9 @@ class EmergencychecklistFixture extends TestFixture
     public $records = [
         [
             'id' => 1,
-            'checklist' => 'Lorem ipsum dolor sit amet'
+
+            'checklist' => 'Remember to keep medicines'
+
         ],
     ];
 }

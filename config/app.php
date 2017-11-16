@@ -270,7 +270,7 @@ return [
             'host' => 'localhost',
             //'port' => 'non_standard_port_number',
             'username' => 'root',
-            'password' => 's',
+            'password' => '',
             'database' => 'cake-auth-test',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
