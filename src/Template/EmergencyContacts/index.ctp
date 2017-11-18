@@ -38,7 +38,9 @@
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $emergencyContact->eid]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $emergencyContact->eid]) ?>
+
 					<?= $this->Html->link(__('Email'), ['action' => 'sendEmail', $emergencyContact->email]) ?>
+
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $emergencyContact->eid], ['confirm' => __('Are you sure you want to delete # {0}?', $emergencyContact->eid)]) ?>
                 </td>
             </tr>

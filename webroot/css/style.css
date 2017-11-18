@@ -12,7 +12,11 @@
 @import url('pe-icon-7-stroke.css');
 @import url('helper.css');
 
-
+ #map {
+        height: 400px;
+        width: 100%;
+       }
+       
 body {
     width: 100%;
     height: 100%;

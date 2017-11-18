@@ -66,6 +66,7 @@ class EmergencyContactsTableTest extends TestCase
         );
     }
 
+
     /**
      * Test validationDefault method
      *

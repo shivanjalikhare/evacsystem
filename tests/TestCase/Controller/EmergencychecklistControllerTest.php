@@ -16,7 +16,9 @@ class EmergencychecklistControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
+
         'app.emergencychecklist', 'app.users'
+
     ];
 
     /**
@@ -38,7 +40,6 @@ class EmergencychecklistControllerTest extends IntegrationTestCase
         $this->get('/emergencychecklist');
         // Check that the response was a 200
         $this->assertResponseOk();
-
     }
 
     /**
@@ -48,7 +49,7 @@ class EmergencychecklistControllerTest extends IntegrationTestCase
      */
     public function testAdd()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+
         // Set session data
         $this->session([
             'Auth' => [
@@ -78,7 +79,6 @@ class EmergencychecklistControllerTest extends IntegrationTestCase
         $this->assertResponseSuccess();
     }
 
-
     /**
      * Test delete method
      *
@@ -86,6 +86,7 @@ class EmergencychecklistControllerTest extends IntegrationTestCase
      */
     public function testDelete()
     {
+
         //$this->markTestIncomplete('Not implemented yet.');
          $this->enableRetainFlashMessages();
         
@@ -105,7 +106,6 @@ class EmergencychecklistControllerTest extends IntegrationTestCase
 
         // Check for a 2xx/3xx response code
         $this->assertResponseSuccess();
-
 
     }
 }

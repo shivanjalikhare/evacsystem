@@ -36,7 +36,7 @@ class UsersControllerTest extends IntegrationTestCase
         ]
         ]);
     
-        $this->get('/users/index');
+        $this->get('/users/add');
         // Check that the response was a 200
         $this->assertResponseOk();
 

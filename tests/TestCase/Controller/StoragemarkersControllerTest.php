@@ -16,6 +16,7 @@ class StoragemarkersControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
+
         'app.storagemarkers', 'app.users'
     ];
 
@@ -26,6 +27,7 @@ class StoragemarkersControllerTest extends IntegrationTestCase
      */
     public function testView()
     {
+
         // Set session data
         $this->session([
         'Auth' => [

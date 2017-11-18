@@ -65,8 +65,6 @@ class StoragemarkersTableTest extends TestCase
             $this->Storagemarkers->primaryKey(),
             'The [Users]Table default primary key is expected to be `id`.'
         );
-
-        
     }
 
     /**
@@ -83,6 +81,7 @@ class StoragemarkersTableTest extends TestCase
             'lat' => 1,
             'lng' => 1,
             'type' => 'Storage'
+
         ];
 
         $storagemarkers = $this->Storagemarkers->newEntity($data);

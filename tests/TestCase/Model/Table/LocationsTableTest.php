@@ -81,6 +81,7 @@ class LocationsTableTest extends TestCase
 
         $locations = $this->Locations->newEntity($data);
         $this->assertEmpty($locations->errors());
+
     }
 
     /**
@@ -93,6 +94,7 @@ class LocationsTableTest extends TestCase
         $validator = $this->Locations->validationDefault($validator);
         $this->assertTrue($validator->hasField('id'));
         $this->assertTrue($validator->hasField('city'));
+
     }
 
     /**

@@ -39,6 +39,7 @@ class StoragelocationFixture extends TestFixture
         [
             'id' => 1,
             'city' => 'Lafayette'
+
         ],
     ];
 }

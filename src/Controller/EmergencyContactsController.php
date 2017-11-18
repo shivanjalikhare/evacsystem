@@ -42,6 +42,7 @@ class EmergencyContactsController extends AppController
         $this->set('emergencyContact', $emergencyContact);
         $this->set('_serialize', ['emergencyContact']);
     }
+
 	
 	public function sendEmail($user_email)
     {
@@ -64,6 +65,7 @@ class EmergencyContactsController extends AppController
     }
 	
 	
+
 
     /**
      * Add method

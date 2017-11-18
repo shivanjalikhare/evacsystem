@@ -1,4 +1,4 @@
-.disabled a,
+/*.disabled a,
 a.disabled {
     pointer-events: none;
 }
@@ -122,7 +122,7 @@ ul.pagination .disabled:hover a {
 }
 .desc:after {
     content: " \2191";
-}
+}*/
 
 .form .error-message {
     display: block;
@@ -164,7 +164,7 @@ input[type=radio] {
 .error label.error {
     color: #C3232D;
 }
-
+/*
 .view h2 {
     color: #6F6F6F;
 }
@@ -213,9 +213,9 @@ input[type=radio] {
     margin-top:1.2rem;
     border-bottom: 1px solid #eee;
 }
-
+*/
 /** Notices and Errors **/
-.cake-error,
+/*.cake-error,
 .cake-debug,
 .notice,
 p.error,
@@ -397,6 +397,7 @@ fieldset legend {
 }
 
 .form button[type="submit"] {
+    float: right;
     text-transform: uppercase;
     box-shadow: none;
 }
@@ -410,7 +411,7 @@ button {
     background: ;
     color:white;
 }
-
+*/
 div.message {
     text-align: center;
     cursor: pointer;
@@ -460,7 +461,7 @@ div.message.hidden {
     height: 0;
 }
 
-
+/*
 .vertical-table th {
     padding: 0.5625rem 0.625rem;
     font-size: 0.875rem;
@@ -480,15 +481,15 @@ div.message.hidden {
 .content {
     padding: 2rem;
 }
-
+*/
 /* Use 'one true layout' methods to get equal height columns */
-.container {
+/*.container {
     overflow: hidden;
     min-height: 92%; /* full height almost always */
 }
 
 /* Force equal height by overflowing */
-.content,
+/*.content,
 #actions-sidebar {
     margin-bottom: -99999px;
     padding-bottom: 99999px;
@@ -525,3 +526,4 @@ table td {
     vertical-align: top;
     word-break: break-all;
 }
+*/

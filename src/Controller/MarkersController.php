@@ -14,6 +14,7 @@ class MarkersController extends AppController
 {
 
     /**
+
      * Index method
      *
      * @return \Cake\Http\Response|void
@@ -37,6 +38,7 @@ class MarkersController extends AppController
     }
 
     /**
+
      * View method
      *
      * @param string|null $id Marker id.
@@ -48,8 +50,10 @@ class MarkersController extends AppController
 
         $markers = $this->paginate($this->Markers);
         
+
         $this->set(compact('markers'));
         $this->set('_serialize', ['markers']);
+
         $this->loadModel('Locations');
 
         $locations = $this->Locations->find('list',[
@@ -69,6 +73,11 @@ class MarkersController extends AppController
         $this->set(compact('locations'));
         $this->set('_serialize',['locations']);
        $this->set('markers', $markers);
+
+       
+    }
+
+
     }
 
     /**
@@ -128,4 +137,5 @@ class MarkersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
 }

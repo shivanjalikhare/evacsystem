@@ -17,7 +17,6 @@ class UsersController extends AppController
 
     public function beforeFilter(Event $event){
         $this->Auth->allow(['signup', 'forgetPassword']);
-
     }
 
 
@@ -129,6 +128,13 @@ class UsersController extends AppController
     public function forgotPassword(){
         //empty
     }
+
+
+    public function forecast(){
+        //empty
+    }
+
+
     
     public function forecast(){
         //empty
@@ -179,7 +185,7 @@ class UsersController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-
+ 
     /**
     Checklist
     */
@@ -188,6 +194,13 @@ class UsersController extends AppController
 
     }
     
+     /**
+    new Checklist
+    */
+    public function Emergencychecklist()
+    {
+
+    }
 
     public function password()
     {

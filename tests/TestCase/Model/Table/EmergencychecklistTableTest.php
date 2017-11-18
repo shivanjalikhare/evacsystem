@@ -94,6 +94,6 @@ class EmergencychecklistTableTest extends TestCase
         $validator = $this->Emergencychecklist->validationDefault($validator);
         $this->assertTrue($validator->hasField('id'));
         $this->assertTrue($validator->hasField('checklist'));
- 
+
     }
 }

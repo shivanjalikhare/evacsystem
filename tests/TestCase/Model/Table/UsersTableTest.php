@@ -83,6 +83,7 @@ class UsersTableTest extends TestCase
      */
     public function testValidationDefault()
     {
+
         //using fixture
         $data = [
         'id' => 1,

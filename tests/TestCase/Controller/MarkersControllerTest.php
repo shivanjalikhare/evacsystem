@@ -6,6 +6,11 @@ use Cake\TestSuite\IntegrationTestCase;
 use App\Controller\UsersController;
 use Cake\ORM\TableRegistry;
 
+use App\Controller\UsersController;
+use Cake\ORM\TableRegistry;
+
+
+
 /**
  * App\Controller\MarkersController Test Case
  */
@@ -18,6 +23,7 @@ class MarkersControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
+
         'app.markers',
         'app.users'
     ];
@@ -48,6 +54,4 @@ class MarkersControllerTest extends IntegrationTestCase
              
 
     }
-
-
 }
