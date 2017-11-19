@@ -15,30 +15,6 @@ class MarkersController extends AppController
 
     /**
 
-     * Index method
-     *
-     * @return \Cake\Http\Response|void
-     */
-    public function index()
-    {
-        $markers = $this->paginate($this->Markers);
-        
-        //$this->Markers->find()
-        $this->set(compact('markers'));
-        $this->set('_serialize', ['markers']);
-        //$this->set('locationMarker', $this->Marker->locationMarker(location_Marker));
-        $this->loadModel('Locations');
-
-        $locations = $this->Locations->find('list',[
-            'keyField' => 'id_locations',
-            'valueField' => 'city',
-        ]);
-        $this->set(compact('locations'));
-        $this->set('_serialize',['locations']);
-    }
-
-    /**
-
      * View method
      *
      * @param string|null $id Marker id.
@@ -76,66 +52,4 @@ class MarkersController extends AppController
 
        
     }
-
-
-    }
-
-    /**
-     * Add method
-     *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
-     */
-    public function add()
-    {
-        $marker = $this->Markers->newEntity();
-        if ($this->request->is('post')) {
-            $marker = $this->Markers->patchEntity($marker, $this->request->getData());
-            if ($this->Markers->save($marker)) {
-                $this->Flash->success(__('The marker has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The marker could not be saved. Please, try again.'));
-        }
-        $this->set(compact('marker'));
-        $this->set('_serialize', ['marker']);
-    }
-
-    /**
-     * Edit method
-     *
-     * @param string|null $id Marker id.
-     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
-    public function edit($id = null)
-    {
-        
-        $markers = $this->paginate($this->Markers);
-        
-        
-        $this->set(compact('markers'));
-        $this->set('_serialize', ['markers']);
-    }
-
-    /**
-     * Delete method
-     *
-     * @param string|null $id Marker id.
-     * @return \Cake\Http\Response|null Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
-        $marker = $this->Markers->get($id);
-        if ($this->Markers->delete($marker)) {
-            $this->Flash->success(__('The marker has been deleted.'));
-        } else {
-            $this->Flash->error(__('The marker could not be deleted. Please, try again.'));
-        }
-
-        return $this->redirect(['action' => 'index']);
-    }
-
 }
