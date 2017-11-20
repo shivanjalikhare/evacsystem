@@ -30,13 +30,23 @@
                 </div>
 
                 <div class="form-group">
+                  <!--<?php 
+                    echo $this->Form->create('dropdown', array('name' => 'dropdown'));
+                    echo $this->Form->input('select', array('options' => array(
+                      '1' =>'Individual',
+                      '2' => 'Volunteer',
+                      '3' => 'Organization'), 'empty' => 'Select type of user', 'id' => 'selected', 'value' => 'selected')); 
+                    echo $this->Form->submit(); 
+
+                    ?>-->
+
 
                     <?php $options = array(
                       '1' =>'Individual',
                       '2' => 'Volunteer',
                       '3' => 'Organization'
                     );
-                    echo $this->Form->control('Type', array('options' => $options, 'class'=>'form-control', 'required'=>'required'));
+                    echo $this->Form->control('Type of User', array('options' => $options, 'class'=>'form-control'));
                     ?>
                 </div>
 

@@ -10,7 +10,6 @@ use Cake\TestSuite\Fixture\TestFixture;
 class EmergencyContactsFixture extends TestFixture
 {
 
-	public $import = ['table' => 'emergency_contacts'];
     /**
      * Fields
      *
@@ -40,14 +39,13 @@ class EmergencyContactsFixture extends TestFixture
      * @var array
      */
     public $records = [
-
+        [
             'eid' => 1,
-            'etype' => '1',
-            'name' => 'Shivanjali',
-            'phone' => '3378655423',
-            'email' => 'Shivanjali.123@gmail.com',
-            'Address' => '234 West pinhook'
+            'etype' => 'Lorem ipsum dolor sit amet',
+            'name' => 'Lorem ipsum dolor sit amet',
+            'phone' => 'Lorem ipsum dolor sit amet',
+            'email' => 'Lorem ipsum dolor sit amet',
+            'Address' => 'Lorem ipsum dolor sit amet'
         ],
-
     ];
 }

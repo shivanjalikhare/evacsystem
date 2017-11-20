@@ -6,11 +6,6 @@ use Cake\TestSuite\IntegrationTestCase;
 use App\Controller\UsersController;
 use Cake\ORM\TableRegistry;
 
-use App\Controller\UsersController;
-use Cake\ORM\TableRegistry;
-
-
-
 /**
  * App\Controller\MarkersController Test Case
  */
@@ -23,7 +18,6 @@ class MarkersControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-
         'app.markers',
         'app.users'
     ];
@@ -35,7 +29,9 @@ class MarkersControllerTest extends IntegrationTestCase
      */
     public function testView()
     {
-        // Set session data
+        
+
+         // Set session data
         $this->session([
         'Auth' => [
             'User' => [
@@ -51,7 +47,10 @@ class MarkersControllerTest extends IntegrationTestCase
         $this->get('/markers/view');
 
         $this->assertResponseOk();
-             
+       // $result = $this->get('/markers/view');
+        // Check that the response was a 200
+       // $this->assertResponseOk();
+        
 
-    }
+}
 }

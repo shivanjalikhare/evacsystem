@@ -3,6 +3,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
+use Cake\Mailer\Email;
+use Cake\Mailer\MailerAwareTrait;
 
 
 /**
@@ -14,7 +16,7 @@ use Cake\Event\Event;
  */
 class UsersController extends AppController
 {
-
+    use MailerAwareTrait;
     public function beforeFilter(Event $event){
         $this->Auth->allow(['signup', 'forgetPassword']);
     }
@@ -64,6 +66,7 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
+                $this->getMailer('User')->send('registered', [$user]); // sends emails.
                 $this->Flash->success(__('The user has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
@@ -115,8 +118,8 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
-
+                $this->Flash->success(__('The user has been saved. Please check your email.'));
+                $this->getMailer('User')->send('registered', [$user]);
                 return $this->redirect(['controller'=>'Users','action' => 'login']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
@@ -129,10 +132,10 @@ class UsersController extends AppController
         //empty
     }
 
-
     public function forecast(){
         //empty
     }
+
 
     /**
      * Edit method

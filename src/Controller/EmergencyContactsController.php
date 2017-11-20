@@ -2,6 +2,10 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Mailer\Email;
+use Cake\Mailer\MailerAwareTrait;
+use Cake\Mailer\Mailer;
+
 
 /**
  * EmergencyContacts Controller
@@ -12,6 +16,8 @@ use App\Controller\AppController;
  */
 class EmergencyContactsController extends AppController
 {
+
+    use MailerAwareTrait;
 
     /**
      * Index method
@@ -43,8 +49,8 @@ class EmergencyContactsController extends AppController
         $this->set('_serialize', ['emergencyContact']);
     }
 
-	
-	public function sendEmail($user_email)
+
+    public function sendEmail($user_email)
     {
       
         $email = new Email();
@@ -61,10 +67,7 @@ class EmergencyContactsController extends AppController
         $this->Flash->success(__('Email sent.'));
 
         return $this->redirect(['controller'=>'EmergencyContacts','action' => 'index']);
-
     }
-	
-	
 
 
     /**

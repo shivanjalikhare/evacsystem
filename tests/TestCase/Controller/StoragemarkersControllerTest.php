@@ -16,9 +16,18 @@ class StoragemarkersControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-
-        'app.storagemarkers', 'app.users'
+        'app.storagemarkers'
     ];
+
+    /**
+     * Test index method
+     *
+     * @return void
+     */
+    public function testIndex()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
 
     /**
      * Test view method
@@ -27,25 +36,36 @@ class StoragemarkersControllerTest extends IntegrationTestCase
      */
     public function testView()
     {
-
-        // Set session data
-        $this->session([
-        'Auth' => [
-            'User' => [
-                'id'=> 1,
-            ]
-        ]
-        ]);
-
-        //$this->get('/markers');
-        $this->get('/users'); //get the list of users
-        $this->assertSession(1, 'Auth.User.id'); //check if the user is logged in
-
-        $this->get('/storagemarkers/view');
-
-        $this->assertResponseOk();
-             
-
+        $this->markTestIncomplete('Not implemented yet.');
     }
 
+    /**
+     * Test add method
+     *
+     * @return void
+     */
+    public function testAdd()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test edit method
+     *
+     * @return void
+     */
+    public function testEdit()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test delete method
+     *
+     * @return void
+     */
+    public function testDelete()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
 }

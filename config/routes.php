@@ -62,20 +62,14 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/users/emergency', ['controller' => 'EmergencyContacts', 'action' => 'index']);
     $routes->connect('/users/markers', ['controller' => 'Markers', 'action' => 'index']);
     $routes->connect('/users/locations', ['controller' => 'Locations', 'action' => 'index']);
-
     $routes->connect('/view', ['controller' => 'Markers', 'action' => 'view']);
-
-    $routes->connect('/markers/view', ['controller' => 'Markers', 'action' => 'view']);
-
     $routes->connect('/dashboard',['controller' => 'Users', 'action' => 'dashboard']);
     $routes->connect('/weather', ['controller' => 'Users','action' => 'weather']);
     $routes->connect('/forecast', ['controller' => 'Users','action' => 'forecast']);
     $routes->connect('/storagemarkers/view', ['controller' => 'Storagemarkers', 'action' => 'view']);
-
     $routes->connect('/checklist', ['controller' => 'Users', 'action' => 'Emergencychecklist']);
     $routes->connect('/emergencychecklist', ['controller' => 'Emergencychecklist', 'action' => 'index']);
     
-
    
 
     /**
