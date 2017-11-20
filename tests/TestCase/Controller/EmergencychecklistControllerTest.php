@@ -16,9 +16,7 @@ class EmergencychecklistControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-
-        'app.emergencychecklist', 'app.users'
-
+        'app.emergencychecklist'
     ];
 
     /**
@@ -28,18 +26,17 @@ class EmergencychecklistControllerTest extends IntegrationTestCase
      */
     public function testIndex()
     {
-        $this->session([ //mock user session
-        'Auth' => [
-            'User' => [
-                'id' => 1,
-                // other keys.
-            ]
-        ]
-        ]);
-    
-        $this->get('/emergencychecklist');
-        // Check that the response was a 200
-        $this->assertResponseOk();
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test view method
+     *
+     * @return void
+     */
+    public function testView()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
     }
 
     /**
@@ -49,34 +46,17 @@ class EmergencychecklistControllerTest extends IntegrationTestCase
      */
     public function testAdd()
     {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
 
-        // Set session data
-        $this->session([
-            'Auth' => [
-                'User' => [
-                    'email' => 'xyz@gmail.com',
-                    'password' => '123456',
-                // other keys.
-                ]
-             ]
-        ]);
-
-        $this->get('/users/add');
-
-        // Check for a 2xx response code
-        $response = $this->assertResponseOk();
-
-        $data = [
-        'id' => 15,
-        'email' => 'qwerty@gmail.com',
-        'password' => 'qwerty',
-        'created' => time(),
-        'modified' => time()
-        ];
-        $this->post('/emergencychecklist/add', $data);
-
-        // Check for a 2xx response code
-        $this->assertResponseSuccess();
+    /**
+     * Test edit method
+     *
+     * @return void
+     */
+    public function testEdit()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
     }
 
     /**
@@ -86,26 +66,6 @@ class EmergencychecklistControllerTest extends IntegrationTestCase
      */
     public function testDelete()
     {
-
-        //$this->markTestIncomplete('Not implemented yet.');
-         $this->enableRetainFlashMessages();
-        
-        $this->session([ //mock user session
-        'Auth' => [
-            'User' => [
-                'id' => 3,
-                // other keys.
-            ]
-            ]
-        ]);
-        $this->get('/login');
-        $this->assertSession('You are already logged in.', 'Flash.flash.0.message');
-        $this->assertSession(3, 'Auth.User.id'); //check if the user is logged in
-
-        $this->get('/emergencychecklist/delete');
-
-        // Check for a 2xx/3xx response code
-        $this->assertResponseSuccess();
-
+        $this->markTestIncomplete('Not implemented yet.');
     }
 }

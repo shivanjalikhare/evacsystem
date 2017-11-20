@@ -43,8 +43,7 @@ class StoragemarkersController extends AppController
         $storagemarkers = $locationsq1;
         $this->set(compact('storagelocation'));
         $this->set('_serialize',['storagelocation']);
-        $this->set('storagemarkers', $storagemarkers);
-
+       $this->set('storagemarkers', $storagemarkers);
        
     }
 }

@@ -10,7 +10,7 @@
 <html>
   <body>
     <div class="container marginbot-50">
-      <div class="home-section color-dark bg-white">
+      <div class="home-section color-dark">
         <h3 class="h-bold">Safe Storage Details</h3>
           <?php echo $this->Form->create('dropdown', array('name' => 'dropdown'));?>
           <div class="form-group">

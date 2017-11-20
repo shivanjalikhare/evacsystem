@@ -58,12 +58,7 @@ class MarkersTableTest extends TestCase
      */
     public function testInitialize()
     {
-       $this->Markers->initialize([]); //have to call manually to get coverage.
-        $this->assertEquals(
-            'id',
-            $this->Markers->primaryKey(),
-            'The [Users]Table default primary key is expected to be `id`.'
-        );
+        $this->markTestIncomplete('Not implemented yet.');
     }
 
     /**
@@ -74,33 +69,14 @@ class MarkersTableTest extends TestCase
     public function testValidationDefault()
     {
         $data = [
-        'id' => 1,
-            'name' => 'Lafayette',
-            'address' => '2509 West pinhook',
-            'lat' => 1,
-            'lng' => 1,
-            'type' => 'Marker'
+        'id' => 15,
+        'email' => 'qwerty@gmail.com',
+        'password' => 'qwerty',
+        'created' => time(),
+        'modified' => time()
         ];
 
         $markers = $this->Markers->newEntity($data);
         $this->assertEmpty($markers->errors());
     }
-
-    /**
-     * Test validationDefault method
-     *
-     * @return void
-     */
-    public function testValidationDefault_CheckFields() {
-        $validator = new \Cake\Validation\Validator(); //object
-        
-        $validator = $this->Markers->validationDefault($validator);
-        $this->assertTrue($validator->hasField('id'));
-        $this->assertTrue($validator->hasField('name'));
-        $this->assertTrue($validator->hasField('address'));
-        $this->assertTrue($validator->hasField('lat'));  
-        $this->assertTrue($validator->hasField('lng')); 
-        $this->assertTrue($validator->hasField('type')); 
-    }
-
 }

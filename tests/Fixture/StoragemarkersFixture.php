@@ -41,12 +41,11 @@ class StoragemarkersFixture extends TestFixture
     public $records = [
         [
             'id' => 1,
-
-            'name' => 'Lafayette',
-            'address' => '2000 Johnston Street',
+            'name' => 'Lorem ipsum dolor sit amet',
+            'address' => 'Lorem ipsum dolor sit amet',
             'lat' => 1,
             'lng' => 1,
-            'type' => 'Storage'
+            'type' => 'Lorem ipsum dolor sit amet'
         ],
     ];
 }

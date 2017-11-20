@@ -1,5 +1,3 @@
-
-
 <?php echo $this->element('sidemenus\navbar_loggedin'); ?>
 <html> 
     <head>

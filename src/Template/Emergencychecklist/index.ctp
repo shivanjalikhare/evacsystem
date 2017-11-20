@@ -6,15 +6,15 @@
  */
 ?>
 
-    
-<div class="table table-hover">
-    <h3><?= __('Emergency Checklist') ?></h3>
+<div class="container marginbot-50 home-section color-dark">
+    <div class="container">
+        <h3 class="h-bold"><?= __('Emergency Checklist') ?></h3>
     <?= $this->Html->link(__('Add new item'), ['action' => 'add']) ?>
-    <table cellpadding="0" cellspacing="0">
+    <table class="table table-hover bg-white" style="border-radius=25px;">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('checklist') ?></th>
+                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Checklist') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
