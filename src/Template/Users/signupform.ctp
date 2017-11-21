@@ -52,3 +52,11 @@
   </fieldset>
 <?= $this->Form->end() ?>
 </div>
+<div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <?= $this->Form->button(__('Signup'),['class'=>'btn btn-primary'])?>
+      </div>
+    </div>
+  </fieldset>
+<?= $this->Form->end() ?>
+</div>
