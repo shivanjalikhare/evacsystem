@@ -70,6 +70,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/checklist', ['controller' => 'Users', 'action' => 'Emergencychecklist']);
     $routes->connect('/emergencychecklist', ['controller' => 'Emergencychecklist', 'action' => 'index']);
     
+    $routes->connect('/saferoute', ['controller' => 'Users','action' => 'saferoute']);
    
 
     /**

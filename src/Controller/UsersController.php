@@ -110,7 +110,9 @@ class UsersController extends AppController
 
         }
     }
-
+    public function saferoute(){
+        
+    }
 
     
 
