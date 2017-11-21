@@ -21,7 +21,7 @@ class UsersController extends AppController
         $this->Auth->allow(['signup', 'forgetPassword']);
     }
 
-
+	// try to create a pull request from razin
     /**
      * Index method
      *
@@ -91,9 +91,20 @@ class UsersController extends AppController
             if($user){
                 $this->Auth->setUser($user);
                 //redirect
+				if($user['Type']==1){
+                $this->Auth->setUser($user);
+                //redirect
                 $this->Flash->success(__('Login Successful!'));
                 return $this->redirect(['controller'=>'Users', 'action'=>'dashboard']);
                 }
+            elseif($user['Type']==2) {
+                //$this->Flash->error(__('Sorry, user type mismatch'));
+                $this->Auth->setUser($user);
+                //redirect
+                $this->Flash->success(__('Login Successful!'));
+                return $this->redirect(['controller'=>'Users', 'action'=>'volunteerdashboard']);   
+            }
+
             $this->Flash->error(__('Sorry, the login was not successful'));
     
 
