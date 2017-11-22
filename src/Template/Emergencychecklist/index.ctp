@@ -9,7 +9,10 @@
 <div class="container marginbot-50 home-section color-dark">
     <div class="container">
         <h3 class="h-bold"><?= __('Emergency Checklist') ?></h3>
-    <?= $this->Html->link(__('Add new item'), ['action' => 'add']) ?>
+        <div class="form-group">
+            <?= $this->Html->link(__('Add new item'), ['action' => 'add'], array('class'=>'btn btn-lg btn-primary')); ?>
+        </div>
+    
     <table class="table table-hover bg-white" style="border-radius=25px;">
         <thead>
             <tr>

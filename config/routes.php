@@ -72,6 +72,7 @@ Router::scope('/', function (RouteBuilder $routes) {
 	
 	$routes->connect('/volunteerdashboard',['controller' => 'Users', 'action' => 'volunteerdashboard']);
     
+    $routes->connect('/saferoute', ['controller' => 'Users','action' => 'saferoute']);
    
 
     /**

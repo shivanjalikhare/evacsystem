@@ -1,26 +1,37 @@
+<?php echo $this->element('sidemenus\navbar_loggedin'); ?>
 <?php
 /**
  * @var \App\View\AppView $this
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Emergency Contacts'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
-<div class="emergencyContacts form large-9 medium-8 columns content">
-    <?= $this->Form->create($emergencyContact) ?>
-    <fieldset>
-        <legend><?= __('Add Emergency Contact') ?></legend>
-        <?php
-            echo $this->Form->control('etype');
-            echo $this->Form->control('name');
-            echo $this->Form->control('phone');
-            echo $this->Form->control('email');
-            echo $this->Form->control('Address');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+<div class="container marginbot-50 home-section color-dark">
+    <div class="form-group">
+        <?= $this->Html->link(__('Back to Emergency Contacts'), ['action' => 'index'], array('class'=>'btn btn-lg btn-danger' )); ?>
+    </div>
+    <div class="emergencyContacts form large-9 medium-8 columns content">
+        <?= $this->Form->create($emergencyContact) ?>
+        <fieldset>
+            <h3><?= __('Add Emergency Contact') ?></h3>
+            
+               <div class="form-group">
+                        <?php echo $this->Form->control('etype',['placeholder'=>'Enter type of help', 'class'=>'form-control']); ?>
+                    </div>
+                    <div class="form-group">
+                        <?php echo $this->Form->control('name',['placeholder'=>'Enter your email', 'class'=>'form-control']); ?>
+                    </div>
+                    <div class="form-group">
+                        <?php echo $this->Form->control('phone',['placeholder'=>'Enter your email', 'class'=>'form-control']); ?>
+                    </div>
+                    <div class="form-group">
+                        <?php echo $this->Form->control('email',['placeholder'=>'Enter your email', 'class'=>'form-control']);?>
+                    </div>
+                    <div class="form-group">
+                        <?php echo $this->Form->control('Address',['placeholder'=>'Enter your email', 'class'=>'form-control']); ?>
+                    </div>
+        </fieldset>
+        <div class="form-group">
+            <?= $this->Form->button(__('Submit'), array('class'=>'btn btn-lg btn-primary' )); ?>
+        </div>
+        <?= $this->Form->end() ?>
+    </div>
 </div>
