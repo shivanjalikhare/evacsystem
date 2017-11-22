@@ -89,12 +89,15 @@ class UsersController extends AppController
         //if user is not already logged in, attempt to log in        
             $user = $this->Auth->identify();
             
+            //individual
             if($user['Type']==1){
                 $this->Auth->setUser($user);
                 //redirect
                 $this->Flash->success(__('Login Successful!'));
                 return $this->redirect(['controller'=>'Users', 'action'=>'dashboard']);
                 }
+
+            //volunteer
             elseif($user['Type']==2) {
                 //$this->Flash->error(__('Sorry, user type mismatch'));
                 $this->Auth->setUser($user);
@@ -103,6 +106,14 @@ class UsersController extends AppController
                 return $this->redirect(['controller'=>'Users', 'action'=>'volunteerdashboard']);   
             }
 
+            //organization
+            elseif($user['Type']==3) {
+                //$this->Flash->error(__('Sorry, user type mismatch'));
+                $this->Auth->setUser($user);
+                //redirect
+                $this->Flash->success(__('Login Successful!'));
+                return $this->redirect(['controller'=>'Users', 'action'=>'organizationdashboard']);   
+            }
             
             $this->Flash->error(__('Sorry, the login was not successful'));
     
@@ -110,10 +121,28 @@ class UsersController extends AppController
         }
     }
 
-	  
+
+
+    
 
     public function dashboard()
     {
+         /**$user = $this->Users->get($id, [
+            'contain' => []
+        ]);
+
+        $this->set('user', $user);
+        $this->set('_serialize', ['user']);**/
+    }
+
+    public function volunteerdashboard()
+    {
+
+    }
+
+    public function organizationdashboard()
+    {
+
     }
 
     public function logout(){
@@ -145,7 +174,8 @@ class UsersController extends AppController
         //empty
     }
 
-	/**
+
+    /**
      * Edit method
      *
      * @param string|null $id User id.
@@ -192,7 +222,7 @@ class UsersController extends AppController
 
  
     /**
-    *Checklist
+    Checklist
     */
     public function checklist()
     {
@@ -200,7 +230,7 @@ class UsersController extends AppController
     }
     
      /**
-    *new Checklist
+    new Checklist
     */
     public function Emergencychecklist()
     {
@@ -269,10 +299,6 @@ class UsersController extends AppController
         } else {
             $this->redirect('/');
         }
-    }
-	
-	public function volunteerdashboard(){
-        
     }
 
 }
