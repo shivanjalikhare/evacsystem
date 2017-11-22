@@ -111,7 +111,9 @@ class UsersController extends AppController
         }
     }
 
-
+    public function saferoute()
+    {
+    }
     
 
     public function dashboard()
