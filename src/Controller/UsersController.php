@@ -100,8 +100,9 @@ class UsersController extends AppController
         }
     }
 
-
-    
+	public function volunteerdashboard(){
+        
+    }    
 
     public function dashboard()
     {
