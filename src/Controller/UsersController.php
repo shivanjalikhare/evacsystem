@@ -100,9 +100,7 @@ class UsersController extends AppController
         }
     }
 
-	public function volunteerdashboard(){
-        
-    }    
+	  
 
     public function dashboard()
     {
@@ -137,7 +135,10 @@ class UsersController extends AppController
         //empty
     }
 
-
+	public function volunteerdashboard(){
+        
+    } 
+		
     /**
      * Edit method
      *
