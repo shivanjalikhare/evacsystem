@@ -88,12 +88,22 @@ class UsersController extends AppController
         if($this->request->is('post')){//check if login form is submitted
         //if user is not already logged in, attempt to log in        
             $user = $this->Auth->identify();
-            if($user){
+            
+            if($user['Type']==1){
                 $this->Auth->setUser($user);
                 //redirect
                 $this->Flash->success(__('Login Successful!'));
                 return $this->redirect(['controller'=>'Users', 'action'=>'dashboard']);
                 }
+            elseif($user['Type']==2) {
+                //$this->Flash->error(__('Sorry, user type mismatch'));
+                $this->Auth->setUser($user);
+                //redirect
+                $this->Flash->success(__('Login Successful!'));
+                return $this->redirect(['controller'=>'Users', 'action'=>'volunteerdashboard']);   
+            }
+
+            
             $this->Flash->error(__('Sorry, the login was not successful'));
     
 
