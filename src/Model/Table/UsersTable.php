@@ -66,6 +66,11 @@ class UsersTable extends Table
             ->requirePresence('phone', 'create')
             ->notEmpty('phone');
 
+        $validator
+             ->scalar('Type')
+             ->requirePresence('Type', 'create')
+             ->notEmpty('Type');
+
         return $validator;
     }
 

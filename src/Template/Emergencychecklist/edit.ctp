@@ -1,28 +1,30 @@
+<?php echo $this->element('sidemenus\navbar_loggedin'); ?>
 <?php
 /**
  * @var \App\View\AppView $this
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $emergencychecklist->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $emergencychecklist->id)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('List Emergencychecklist'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
-<div class="emergencychecklist form large-9 medium-8 columns content">
-    <?= $this->Form->create($emergencychecklist) ?>
-    <fieldset>
-        <legend><?= __('Edit Emergencychecklist') ?></legend>
-        <?php
-            echo $this->Form->control('checklist');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+<div class="container marginbot-50 home-section color-dark">
+    <div class="form-group">
+        <?= $this->Html->link(__('Back to Emergency checklist'), ['action' => 'index'], array('class'=>'btn btn-lg btn-danger')); ?>
+    </div>
+    <div class="container">
+        <h3 class="h-bold"><?= __('Edit Emergency checklist') ?></h3>
+        <div class="emergencychecklist form large-9 medium-8 columns content">
+            <?= $this->Form->create($emergencychecklist) ?>
+            <fieldset>
+                <div class="form-group">
+                    <?php
+                        echo $this->Form->control('checklist',['placeholder'=>'Enter the item to be added', 'class'=>'form-control']);
+                    ?>
+                </div>
+            </fieldset>
+            <?= $this->Form->button(__('Submit'), array('class'=>'btn btn-lg btn-primary' )); ?>
+            <?= $this->Form->end() ?>
+        </div>
+    </div>
 </div>
+
+
+
+

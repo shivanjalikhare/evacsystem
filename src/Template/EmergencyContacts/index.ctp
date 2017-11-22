@@ -8,6 +8,9 @@
 <div class="container marginbot-50 home-section color-dark">
     <div class="container">
         <h3 class="h-bold"><?= __('Emergency Contacts') ?></h3>
+        <div class="form-group">
+            <?= $this->Html->link(__('New Emergency Contact'), ['action' => 'add'],array('class'=>'btn btn-lg btn-primary')); ?>
+        </div>
         <table class="table table-bordered table-hover bg-white">
             <thead>
                 <tr>
@@ -39,9 +42,6 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <div>
-            <?= $this->Html->link(__('New Emergency Contact'), ['action' => 'add','class'=>'btn btn-primary'])?>
-        </div>
         <div class="paginator">
             <ul class="pagination">
                 <?= $this->Paginator->first('<< ' . __('first')) ?>
