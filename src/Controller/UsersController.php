@@ -135,11 +135,7 @@ class UsersController extends AppController
         //empty
     }
 
-	public function volunteerdashboard(){
-        
-    } 
-		
-    /**
+	/**
      * Edit method
      *
      * @param string|null $id User id.
@@ -186,7 +182,7 @@ class UsersController extends AppController
 
  
     /**
-    Checklist
+    *Checklist
     */
     public function checklist()
     {
@@ -194,7 +190,7 @@ class UsersController extends AppController
     }
     
      /**
-    new Checklist
+    *new Checklist
     */
     public function Emergencychecklist()
     {
@@ -263,6 +259,10 @@ class UsersController extends AppController
         } else {
             $this->redirect('/');
         }
+    }
+	
+	public function volunteerdashboard(){
+        
     }
 
 }
