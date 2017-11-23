@@ -1,4 +1,4 @@
-	<?php
+<?php
 /**
 *
 * Nav bar for user when user is logged in
