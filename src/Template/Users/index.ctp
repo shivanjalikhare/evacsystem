@@ -11,7 +11,7 @@
         
         <div class="container">
             <h3 class="h-bold"><?= __('Users') ?></h3>
-             <div class="form-group">
+            <div class="form-group">
                 <p>
                     <div class="numberCircle">1</div>Individual
                     <div class="numberCircle">2</div> Volunteer
@@ -36,6 +36,7 @@
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            
             <div class="paginator">
                 <ul class="pagination">
                     <?= $this->Paginator->first('<< ' . __('first')) ?>

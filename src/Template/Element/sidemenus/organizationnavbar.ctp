@@ -49,9 +49,9 @@
                     <li><?= $this->Html->link(__('Team'), [], array('class'=>'fa fa-user')); ?></li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-shield"></i>Services <span class="caret"></span></a>
 				        <ul class="dropdown-menu">
-				          <li><?= $this->Html->link(__('Weather forecast'), ['controller' => 'Users','action' => 'forecast'], array('class'=>'fa fa-tv')); ?></li>
-				          <li><?= $this->Html->link(__('Safe Shelter Information'), ['controller' => 'Markers', 'action' => 'view'], array('class'=>'fa fa-home')); ?></li>
-				          <li><?= $this->Html->link(__('Safe Storage Information'), ['controller' => 'Storagemarkers', 'action' => 'view'], array('class'=>'fa fa-building')); ?></li>
+				          <li><?= $this->Html->link(__('Weather forecast'), [], array('class'=>'fa fa-tv')); ?></li>
+				          <li><?= $this->Html->link(__('Safe Shelter Information'), [], array('class'=>'fa fa-home')); ?></li>
+				          <li><?= $this->Html->link(__('Safe Storage Information'), [], array('class'=>'fa fa-building')); ?></li>
 				        </ul>
 				    </li>
                     <li><?= $this->Html->link('Logout',['controller'=>'users', 'action'=>'logout'], array('class'=>'fa fa-lock')); ?></a></li>

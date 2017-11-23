@@ -93,6 +93,6 @@ class EmergencychecklistController extends AppController
             $this->Flash->error(__('The emergencychecklist could not be deleted. Please, try again.'));
         }
 
-        return $this->redirect(['action' => 'add']);
+        return $this->redirect(['action' => 'index']);
     }
 }

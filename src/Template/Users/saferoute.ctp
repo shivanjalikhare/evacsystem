@@ -1,3 +1,6 @@
+
+<?php echo $this->element('sidemenus\volunteernavbar'); ?>
+
 <!DOCTYPE html>
 <html>
   <head>

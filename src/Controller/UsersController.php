@@ -222,7 +222,7 @@ class UsersController extends AppController
 
  
     /**
-    Checklist
+    * Checklist
     */
     public function checklist()
     {
@@ -230,7 +230,7 @@ class UsersController extends AppController
     }
     
      /**
-    new Checklist
+    * new Checklist
     */
     public function Emergencychecklist()
     {
@@ -306,3 +306,4 @@ class UsersController extends AppController
     }
 
 }
+

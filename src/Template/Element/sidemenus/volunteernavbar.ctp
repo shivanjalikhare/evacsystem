@@ -46,13 +46,13 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="menu">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><?= $this->Html->link(__('Profile'), ['controller'=>'users', 'action' => 'dashboard','name'=>'dasd'], array('class'=>'fa fa-user-circle')); ?></li>
+                    <li><?= $this->Html->link(__('Profile'), [], array('class'=>'fa fa-user-circle')); ?></li>
                     <li><?= $this->Html->link(__('Volunteer List'), [], array('class'=>'fa fa-user')); ?></li>
                     <li><?= $this->Html->link(__('Organization List'), [], array('class'=>'fa fa-user')); ?></li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-shield"></i>Services <span class="caret"></span></a>
 				        <ul class="dropdown-menu">
-				          <li><?= $this->Html->link(__('Weather forecast'), ['controller' => 'Users','action' => 'forecast'], array('class'=>'fa fa-tv')); ?></li>
-				          <li><?= $this->Html->link(__('Safe Route Information'), [], array('class'=>'fa fa-home')); ?></li>
+				          <li><?= $this->Html->link(__('Weather forecast'), [], array('class'=>'fa fa-tv')); ?></li>
+				          <li><?= $this->Html->link(__('Safe Route Information'), ['controller' => 'Users','action' => 'saferoute'], array('class'=>'fa fa-home')); ?></li>
 				          <li><?= $this->Html->link(__('Shared Resources Information'), [], array('class'=>'fa fa-building')); ?></li>
 				        </ul>
 				    </li>
