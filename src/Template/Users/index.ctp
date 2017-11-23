@@ -11,6 +11,13 @@
         
         <div class="container">
             <h3 class="h-bold"><?= __('Users') ?></h3>
+             <div class="form-group">
+                <p>
+                    <div class="numberCircle">1</div>Individual
+                    <div class="numberCircle">2</div> Volunteer
+                    <div class="numberCircle">3</div> Organization
+                </p>
+            </div>
             <table class="table table-bordered table-hover bg-white">
                 <thead>
                     <tr>

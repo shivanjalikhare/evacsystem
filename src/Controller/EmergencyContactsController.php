@@ -53,9 +53,11 @@ class EmergencyContactsController extends AppController
     public function sendEmail($user_email)
     {
       
+        $loggedinuser = $this->request->session()->read('Auth.User');
         $email = new Email();
-        $email->viewVars(['value' => 12345]);  
-  
+        $email->viewVars(['value' =>  $loggedinuser['email']]);  
+
+
         $email
             ->template('emergency')
             ->emailFormat('html')
