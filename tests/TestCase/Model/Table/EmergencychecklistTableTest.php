@@ -58,7 +58,12 @@ class EmergencychecklistTableTest extends TestCase
      */
     public function testInitialize()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->Emergencychecklist->initialize([]); //have to call manually to get coverage.
+        $this->assertEquals(
+            'id',
+            $this->Emergencychecklist->primaryKey(),
+            'The [Emergencychecklist]Table default primary key is expected to be `id`.'
+        );
     }
 
     /**
@@ -68,6 +73,11 @@ class EmergencychecklistTableTest extends TestCase
      */
     public function testValidationDefault()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $data = [
+            'id' => 1,
+            'checklist' => 'Fuel'
+        ];
+        $user = $this->Emergencychecklist->newEntity($data);
+        $this->assertEmpty($user->errors());
     }
 }
