@@ -83,17 +83,16 @@ class LocationsTableTest extends TestCase
         $this->assertTrue($validator->hasField('city'));
     }
     /**
-     * Test buildRules method
+     * Test fixture records
      *
      * @return void
      */
-    public function testBuildRules()
-    {
-        $comment =  $this->Locations->newEntity([
+     public function testFixtureRecord()
+     {
+        $data = $this->Locations->find()->where([
+            'id' => 1,
             'city' => 'Lafayette'
-            
         ]);
-        $result = $this->Locations->checkRules($comment);
-        $this->assertFalse($result);
-    }
+        $this->assertEquals(1, $data->count());
+     }
 }
