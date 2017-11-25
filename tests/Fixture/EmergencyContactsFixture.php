@@ -47,5 +47,13 @@ class EmergencyContactsFixture extends TestFixture
             'email' => 'Shivanjali.123@gmail.com',
             'Address' => '234 West pinhook'
         ],
+		[
+            'eid' => 2,
+            'etype' => '1',
+            'name' => 'Razin',
+            'phone' => '3374428237',
+            'email' => 'razin2good@gmail.com',
+            'Address' => '200 East Lewis Street'
+        ],
     ];
 }

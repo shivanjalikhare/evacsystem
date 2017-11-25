@@ -119,4 +119,17 @@ class EmergencyContactsTableTest extends TestCase
         $result = $this->EmergencyContacts->checkRules($comment);
         $this->assertFalse($result);
     }
+	
+	/**
+     * Test fixture records of similar type
+     *
+     * @return void
+     */
+     public function testFixtureRecord()
+     {
+       
+        $data = $this->EmergencyContacts->find()->where(['etype' => '1']);
+        $this->assertEquals(2, $data->count());
+
+     }
 }
