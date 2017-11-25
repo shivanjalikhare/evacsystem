@@ -102,5 +102,29 @@ class EmergencyContactsControllerTest extends IntegrationTestCase
         $this->assertResponseSuccess();
 
     }
+	
+	/**
+     * Test delete method
+     *
+     * @test
+     */
+    
+    public function testDelete()
+    {
+        // Set session data
+        $this->session([ //mock user session
+        'Auth' => [
+            'User' => [
+                'id' => 1,
+                // other keys.
+                ]
+            ]
+        ]);
+        
+        $this->get('/users/emergency/delete/2');
+        // Check for a 2xx/3xx response code
+        $this->assertResponseSuccess();
+       
+    }
 
 }

@@ -138,16 +138,22 @@ class UsersControllerTest extends IntegrationTestCase
      * @test
      */
     
-    public function testDelete()
+    public function testDeleteNotAllowed()
     {
-        //this TC is passed. But need to analyze more to identify the process.
-        $this->delete('/delete/2');
+        // Set session data
+        $this->session([ //mock user session
+        'Auth' => [
+            'User' => [
+                'id' => 1,
+                // other keys.
+                ]
+            ]
+        ]);
+        
+        $this->get('/delete');
         // Check for a 2xx/3xx response code
-        //$this->assertResponseSuccess();
-
-        $users = TableRegistry::get('Users');
-        $data = $users->find()->where(['id' => 2]);
-        $this->assertEquals(0, $data->count());
+        $this->assertResponseCode(405);// method is not allowed check
+       
     }
 
     /**
