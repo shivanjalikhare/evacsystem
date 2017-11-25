@@ -112,4 +112,18 @@ class StoragelocationsTableTest extends TestCase
         $result = $this->Storagelocation->checkRules($comment);
         $this->assertFalse($result);
     }
+
+    /**
+     * Test fixture records
+     *
+     * @return void
+     */
+     public function testFixtureRecord()
+     {
+        $data = $this->Storagelocation->find()->where([
+            'id' => 1,
+            'city' => 'Lafayette'
+        ]);
+        $this->assertEquals(1, $data->count());
+     }
 }
