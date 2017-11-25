@@ -91,4 +91,22 @@ class MarkersTableTest extends TestCase
         $this->assertTrue($validator->hasField('lng')); 
         $this->assertTrue($validator->hasField('type')); 
     }
+
+    /**
+     * Test fixture records
+     *
+     * @return void
+     */
+     public function testFixtureRecord()
+     {
+        $data = $this->Markers->find()->where([
+            'id' => 1,
+            'name' => 'Lafayette',
+            'address' => '2509 West pinhook',
+            'lat' => 1,
+            'lng' => 1,
+            'type' => 'Marker'
+        ]);
+        $this->assertEquals(1, $data->count());
+     }
 }
