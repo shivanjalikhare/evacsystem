@@ -80,4 +80,15 @@ class EmergencychecklistTableTest extends TestCase
         $user = $this->Emergencychecklist->newEntity($data);
         $this->assertEmpty($user->errors());
     }
+	
+	 /**
+     * Test fixture records
+     *
+     * @return void
+     */
+     public function testFixtureRecord()
+     {
+        $data = $this->Emergencychecklist->find()->where(['checklist' => 'Food']);
+        $this->assertEquals(1, $data->count());
+     }
 }
