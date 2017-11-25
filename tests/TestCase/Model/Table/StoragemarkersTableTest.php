@@ -93,4 +93,21 @@ class StoragemarkersTableTest extends TestCase
         $this->assertTrue($validator->hasField('lng'));
         $this->assertTrue($validator->hasField('type'));  
     }
-}.
+    /**
+     * Test fixture records
+     *
+     * @return void
+     */
+     public function testFixtureRecord()
+     {
+        $data = $this->Storagemarkers->find()->where([
+            'id' => 1,
+             'name' => 'Lafayette',
+             'address' => '2000 Johnston Street',
+             'lat' => 1,
+             'lng' => 1,
+             'type' => 'Storage'
+        ]);
+        $this->assertEquals(1, $data->count());
+     }
+}
