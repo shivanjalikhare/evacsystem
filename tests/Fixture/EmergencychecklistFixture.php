@@ -46,5 +46,9 @@ class EmergencychecklistFixture extends TestFixture
             'id' => 1,
             'checklist' => 'Lorem ipsum dolor sit amet'
         ],
+		[
+            'id' => 2,
+            'checklist' => 'Food'
+        ],
     ];
 }
