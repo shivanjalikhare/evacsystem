@@ -41,11 +41,11 @@ class EmergencyContactsFixture extends TestFixture
     public $records = [
         [
             'eid' => 1,
-            'etype' => 'Lorem ipsum dolor sit amet',
-            'name' => 'Lorem ipsum dolor sit amet',
-            'phone' => 'Lorem ipsum dolor sit amet',
-            'email' => 'Lorem ipsum dolor sit amet',
-            'Address' => 'Lorem ipsum dolor sit amet'
+            'etype' => '1',
+            'name' => 'Shivanjali',
+            'phone' => '3378655423',
+            'email' => 'Shivanjali.123@gmail.com',
+            'Address' => '234 West pinhook'
         ],
     ];
 }
