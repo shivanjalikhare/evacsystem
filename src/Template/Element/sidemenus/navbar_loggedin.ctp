@@ -46,8 +46,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="menu">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><?= $this->Html->link(__('Profile'), ['controller'=>'users', 'action' => 'dashboard','name'=>'dasd'], array('class'=>'fa fa-user-circle')); ?></li>
-                    <li><?= $this->Html->link(__('List Users'), ['controller'=>'users', 'action' => 'index'], array('class'=>'fa fa-user')); ?></li>
+                    <li><?= $this->Html->link(__('Profile'), ['controller'=>'users', 'action' => 'userprofile'], array('class'=>'fa fa-user-circle')); ?></li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-shield"></i>Services <span class="caret"></span></a>
 				        <ul class="dropdown-menu">
 				         <li><?= $this->Html->link(__('Emergency Checklist'), ['controller' => 'Emergencychecklist', 'action' => 'index'], array('class'=>'fa fa-tasks')); ?></li>
