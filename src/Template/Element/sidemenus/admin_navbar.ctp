@@ -49,7 +49,7 @@
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-shield"></i>User Management<span class="caret"></span></a>
 				        <ul class="dropdown-menu">
 				        	<li><?= $this->Html->link(__('List Users'), ['controller'=>'Admin', 'action' => 'indexUsersAdmin'], array('class'=>'fa fa-user')); ?></li>
-				          <li><?= $this->Html->link(__('Weather forecast'), ['controller' => 'Users','action' => 'adminweatherforecast'], array('class'=>'fa fa-tv')); ?></li>
+				          <li><?= $this->Html->link(__('Weather forecast'), ['controller' => 'Admin','action' => 'adminweatherforecast'], array('class'=>'fa fa-tv')); ?></li>
 				          <li><?= $this->Html->link(__('Safe Shelter Information'), [], array('class'=>'fa fa-home')); ?></li>
 				          <li><?= $this->Html->link(__('Safe Storage Information'), [], array('class'=>'fa fa-building')); ?></li>
 				        </ul>

@@ -162,4 +162,9 @@ class AdminController extends AppController
         $this->set(compact('user'));
         $this->set('_serialize', ['user']);
     }
+	
+	public function adminweatherforecast()
+    {
+
+    }
 }
