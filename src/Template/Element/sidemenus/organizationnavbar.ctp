@@ -46,10 +46,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="menu">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><?= $this->Html->link(__('Team'), [], array('class'=>'fa fa-user')); ?></li>
+                    <li><?= $this->Html->link(__('Profile'), ['controller' => 'Users','action' => 'organizationprofile'], array('class'=>'fa fa-user')); ?></li>
+                    <li><?= $this->Html->link(__('Team'), ['controller' => 'Orgteam','action' => 'index'], array('class'=>'fa fa-user')); ?></li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-shield"></i>Services <span class="caret"></span></a>
 				        <ul class="dropdown-menu">
-				          <li><?= $this->Html->link(__('Weather forecast'), [], array('class'=>'fa fa-tv')); ?></li>
 				          <li><?= $this->Html->link(__('Safe Shelter Information'), [], array('class'=>'fa fa-home')); ?></li>
 				          <li><?= $this->Html->link(__('Safe Storage Information'), [], array('class'=>'fa fa-building')); ?></li>
 				        </ul>
