@@ -54,7 +54,7 @@
 				          <li><?= $this->Html->link(__('Weather forecast'), ['controller' => 'Users','action' => 'forecast'], array('class'=>'fa fa-tv')); ?></li>
 				          <li><?= $this->Html->link(__('Safe Shelter Information'), ['controller' => 'Markers', 'action' => 'view'], array('class'=>'fa fa-home')); ?></li>
 				          <li><?= $this->Html->link(__('Safe Storage Information'), ['controller' => 'Storagemarkers', 'action' => 'view'], array('class'=>'fa fa-building')); ?></li>
-				         <li><?= $this->Html->link(__('Safe Route Information'), ['controller' => 'Users','action' => 'usersaferoute'], array('class'=>'fa fa-map-marker')); ?></li>
+				         <li><?= $this->Html->link(__('Safe Route Information'), ['controller' => 'Users','action' => 'saferoute'], array('class'=>'fa fa-map-marker')); ?></li>
 				          <li><?= $this->Html->link(__('Emergency Contacts'), ['controller' => 'EmergencyContacts', 'action' => 'index'], array('class'=>'fa fa-mobile-phone')); ?></li>
 				        </ul>
 				    </li>
