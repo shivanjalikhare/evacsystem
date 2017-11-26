@@ -317,6 +317,15 @@ class UsersController extends AppController
     {
 
     }
+	public function volunteerprofile()
+    {
+        
+    }
+
+    public function organizationprofile()
+    {
+
+    }
 
 }
 
