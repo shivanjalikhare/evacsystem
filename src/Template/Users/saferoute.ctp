@@ -1,5 +1,5 @@
 
-<?php echo $this->element('sidemenus\volunteernavbar'); ?>
+<?php echo $this->element('sidemenus\navbar_loggedin'); ?>
 
 <!DOCTYPE html>
 <html>
