@@ -1,23 +1,19 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
-
 use App\Model\Table\LocationsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
-
 /**
  * App\Model\Table\LocationsTable Test Case
  */
 class LocationsTableTest extends TestCase
 {
-
     /**
      * Test subject
      *
      * @var \App\Model\Table\LocationsTable
      */
     public $Locations;
-
     /**
      * Fixtures
      *
@@ -26,7 +22,6 @@ class LocationsTableTest extends TestCase
     public $fixtures = [
         'app.locations'
     ];
-
     /**
      * setUp method
      *
@@ -38,7 +33,6 @@ class LocationsTableTest extends TestCase
         $config = TableRegistry::exists('Locations') ? [] : ['className' => LocationsTable::class];
         $this->Locations = TableRegistry::get('Locations', $config);
     }
-
     /**
      * tearDown method
      *
@@ -47,10 +41,8 @@ class LocationsTableTest extends TestCase
     public function tearDown()
     {
         unset($this->Locations);
-
         parent::tearDown();
     }
-
     /**
      * Test initialize method
      *
@@ -58,9 +50,13 @@ class LocationsTableTest extends TestCase
      */
     public function testInitialize()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->Locations->initialize([]); //have to call manually to get coverage.
+        $this->assertEquals(
+            'id',
+            $this->Locations->primaryKey(),
+            'The [Users]Table default primary key is expected to be `id`.'
+        );
     }
-
     /**
      * Test validationDefault method
      *
@@ -69,24 +65,34 @@ class LocationsTableTest extends TestCase
     public function testValidationDefault()
     {
         $data = [
-        'id' => 15,
-        'email' => 'qwerty@gmail.com',
-        'password' => 'qwerty',
-        'created' => time(),
-        'modified' => time()
+         'id' => 1,
+         'city' => 'Lafayette'
         ];
-
         $locations = $this->Locations->newEntity($data);
         $this->assertEmpty($locations->errors());
     }
-
     /**
-     * Test buildRules method
+     * Test validationDefault method
      *
      * @return void
      */
-    public function testBuildRules()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
+    public function testValidationDefault_CheckFields() {
+        $validator = new \Cake\Validation\Validator(); //object
+        $validator = $this->Locations->validationDefault($validator);
+        $this->assertTrue($validator->hasField('id'));
+        $this->assertTrue($validator->hasField('city'));
     }
+    /**
+     * Test fixture records
+     *
+     * @return void
+     */
+     public function testFixtureRecord()
+     {
+        $data = $this->Locations->find()->where([
+            'id' => 1,
+            'city' => 'Lafayette'
+        ]);
+        $this->assertEquals(1, $data->count());
+     }
 }

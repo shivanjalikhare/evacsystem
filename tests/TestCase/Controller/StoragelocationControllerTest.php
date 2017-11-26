@@ -1,15 +1,19 @@
 <?php
-namespace App\Test\TestCase\Controller;
-
-use App\Controller\StoragelocationController;
-use Cake\TestSuite\IntegrationTestCase;
-
+namespace App\Test\TestCase\Model\Table;
+use App\Model\Table\StoragelocationTable;
+use Cake\ORM\TableRegistry;
+use Cake\TestSuite\TestCase;
 /**
- * App\Controller\StoragelocationController Test Case
+ * App\Model\Table\Storagelocation Test Case
  */
-class StoragelocationControllerTest extends IntegrationTestCase
+class StoragelocationsTableTest extends TestCase
 {
-
+    /**
+     * Test subject
+     *
+     * @var \App\Model\Table\Storagelocation
+     */
+    public $Storagelocation;
     /**
      * Fixtures
      *
@@ -18,54 +22,79 @@ class StoragelocationControllerTest extends IntegrationTestCase
     public $fixtures = [
         'app.storagelocation'
     ];
-
     /**
-     * Test index method
+     * setUp method
      *
      * @return void
      */
-    public function testIndex()
+    public function setUp()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        parent::setUp();
+        $config = TableRegistry::exists('Storagelocation') ? [] : ['className' => StoragelocationTable::class];
+        $this->Storagelocation = TableRegistry::get('Storagelocation', $config);
     }
-
     /**
-     * Test view method
+     * tearDown method
      *
      * @return void
      */
-    public function testView()
+    public function tearDown()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        unset($this->Storagelocation);
+        parent::tearDown();
     }
-
     /**
-     * Test add method
+     * Test initialize method
      *
      * @return void
      */
-    public function testAdd()
+    public function testInitialize()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->Storagelocation->initialize([]); //have to call manually to get coverage.
+        $this->assertEquals(
+            'id',
+            $this->Storagelocation->primaryKey(),
+            'The [Users]Table default primary key is expected to be `id`.'
+        );
     }
-
     /**
-     * Test edit method
+     * Test validationDefault method
      *
      * @return void
      */
-    public function testEdit()
+    public function testValidationDefault()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $data = [
+            'id' => 1,
+            'city' => 'Lafayette'
+        ];
+        $storagelocation = $this->Storagelocation->newEntity($data);
+        $this->assertEmpty($storagelocation->errors());
     }
-
     /**
-     * Test delete method
+     * Test validationDefault method
      *
      * @return void
      */
-    public function testDelete()
+    public function testValidationDefault_CheckFields() {
+        $validator = new \Cake\Validation\Validator(); //object
+        $validator = $this->Storagelocation->validationDefault($validator);
+        $this->assertTrue($validator->hasField('id'));
+        $this->assertTrue($validator->hasField('city'));
+         
+    }
+    /**
+     * Test buildRules method
+     *
+     * @return void
+     */
+    public function testBuildRules()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $comment =  $this->Storagelocation->newEntity([
+            'city' => 'Lafayette'
+            
+        ]);
+        $result = $this->Storagelocation->checkRules($comment);
+        $this->assertFalse($result);
     }
 }

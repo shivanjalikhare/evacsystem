@@ -38,7 +38,7 @@ class StoragelocationFixture extends TestFixture
     public $records = [
         [
             'id' => 1,
-            'city' => 'Lorem ipsum dolor si'
+            'city' => 'Lafayette'
         ],
     ];
 }

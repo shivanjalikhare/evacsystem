@@ -1,15 +1,12 @@
 <?php
 namespace App\Test\Fixture;
-
 use Cake\TestSuite\Fixture\TestFixture;
-
 /**
  * MarkersFixture
  *
  */
 class MarkersFixture extends TestFixture
 {
-
     /**
      * Fields
      *
@@ -32,7 +29,6 @@ class MarkersFixture extends TestFixture
         ],
     ];
     // @codingStandardsIgnoreEnd
-
     /**
      * Records
      *
@@ -41,11 +37,11 @@ class MarkersFixture extends TestFixture
     public $records = [
         [
             'id' => 1,
-            'name' => 'Lorem ipsum dolor sit amet',
-            'address' => 'Lorem ipsum dolor sit amet',
+            'name' => 'Lafayette',
+            'address' => '2509 West pinhook',
             'lat' => 1,
             'lng' => 1,
-            'type' => 'Lorem ipsum dolor sit amet'
+            'type' => 'Marker'
         ],
     ];
 }

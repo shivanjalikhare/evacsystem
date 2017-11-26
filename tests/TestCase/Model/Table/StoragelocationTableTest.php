@@ -56,9 +56,14 @@ class StoragelocationsTableTest extends TestCase
      *
      * @return void
      */
-    public function testInitialize()
+     public function testInitialize()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->Storagelocation->initialize([]); //have to call manually to get coverage.
+        $this->assertEquals(
+            'id',
+            $this->Storagelocation->primaryKey(),
+            'The [Users]Table default primary key is expected to be `id`.'
+        );
     }
 
     /**
@@ -81,12 +86,44 @@ class StoragelocationsTableTest extends TestCase
     }
 
     /**
+     * Test validationDefault method
+     *
+     * @return void
+     */
+    public function testValidationDefault_CheckFields() {
+        $validator = new \Cake\Validation\Validator(); //object
+        $validator = $this->Storagelocation->validationDefault($validator);
+        $this->assertTrue($validator->hasField('id'));
+        $this->assertTrue($validator->hasField('city'));
+         
+    }
+
+    /**
      * Test buildRules method
      *
      * @return void
      */
-    public function testBuildRules()
+     public function testBuildRules()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $comment =  $this->Storagelocation->newEntity([
+            'city' => 'Lafayette'
+            
+        ]);
+        $result = $this->Storagelocation->checkRules($comment);
+        $this->assertFalse($result);
     }
+
+    /**
+     * Test fixture records
+     *
+     * @return void
+     */
+     public function testFixtureRecord()
+     {
+        $data = $this->Storagelocation->find()->where([
+            'id' => 1,
+            'city' => 'Lafayette'
+        ]);
+        $this->assertEquals(1, $data->count());
+     }
 }
