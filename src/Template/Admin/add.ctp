@@ -12,7 +12,7 @@
         <?= $this->Form->create($user) ?>
         <fieldset>
             <h3><?= __('Add User') ?></h3>
-            
+                    
                     <div class="form-group">
                         <?php echo $this->Form->control('email',['placeholder'=>'Enter Email ID', 'class'=>'form-control']); ?>
                     </div>
@@ -25,6 +25,13 @@
                     
                     <div class="form-group">
                         <?php echo $this->Form->control('Type',['placeholder'=>'Enter Type', 'class'=>'form-control']); ?>
+                    </div>
+                    <div class="form-group">
+                        <p>
+                            <div class="numberCircle">1</div>Individual
+                            <div class="numberCircle">2</div> Volunteer
+                            <div class="numberCircle">3</div> Organization
+                        </p>
                     </div>
         </fieldset>
         <div class="form-group">
