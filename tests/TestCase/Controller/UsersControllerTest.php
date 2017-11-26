@@ -230,8 +230,21 @@ class UsersControllerTest extends IntegrationTestCase
         $this->get('/login');
         $this->assertSession('You are already logged in.', 'Flash.flash.0.message');
         $this->assertSession(3, 'Auth.User.id'); //check if the user is logged in
-       
-        
+     }
+	 
+	  /**
+     * Test unauthenticated users resctriction
+     *
+     * @test
+     */
 
-    }
+    public function testAddUnauthenticatedFails()
+    {
+        $this->enableRetainFlashMessages();
+        // No session data set.
+        $this->get('/users/add');
+        $this->assertSession('Did you really think you are allowed to see that?', 'Flash.flash.0.message');
+        $this->assertSession(null,'Auth.User');//check no user in session
+       
+    }   
 }
