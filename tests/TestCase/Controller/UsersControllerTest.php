@@ -232,7 +232,28 @@ class UsersControllerTest extends IntegrationTestCase
         $this->assertSession(3, 'Auth.User.id'); //check if the user is logged in
      }
 	 
-	  /**
+	/**
+     * Test login Failure
+     *
+     * @test
+     */
+     public function testLoginFailure()
+     {
+        $this->enableRetainFlashMessages();
+        $this->enableCsrfToken();
+        $this->enableSecurityToken();
+
+        $this->post('/', [
+            'email' => 'razin2good@gmail.com',
+            'password' => '1234'
+        ]);
+
+        $this->assertNull($this->_requestSession->read('Auth.User'));
+
+        $this->assertSession('Sorry, the login was not successful', 'Flash.flash.0.message');
+    } 
+	
+	/**
      * Test unauthenticated users resctriction
      *
      * @test
