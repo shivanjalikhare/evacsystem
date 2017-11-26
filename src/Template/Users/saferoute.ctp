@@ -91,22 +91,29 @@
     </style>
   </head>
   <body>
-    <h1>Calculate your route</h1>
-    <form id="calculate-route" name="calculate-route" action="#" method="get">
-      <label for="from">From:</label>
-      <input type="text" id="from" name="from" required="required" placeholder="An address" size="30" />
-      <a id="from-link" href="#">Get my position</a>
-      <br />
-
-      <label for="to">To:</label>
-      <input type="text" id="to" name="to" required="required" placeholder="Another address" size="30" />
-      <a id="to-link" href="#">Get my position</a>
-      <br />
-
-      <input type="submit" />
-      <input type="reset" />
-    </form>
-    <div id="map"></div>
-    <p id="error"></p>
+    <div class="container marginbot-50">
+      <div class="home-section color-dark">
+        <h3 class="h-bold">Safe Route Details</h3>
+              <form id="calculate-route" name="calculate-route" action="#" method="get" >
+                <div class="form-group">
+                  <label for="from">From</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="from" name="from" required="required" placeholder="From address" size="30" /> 
+                  <a id="from-link" href="#" class="fa fa-map-marker">Get my position</a>
+                </div>
+                <div class="form-group">
+                  <label for="to">To</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="to" name="to" required="required" placeholder="Another address" size="30" />
+                </div>              
+                <input type="submit" class="btn btn-lg btn-primary" />
+                <input type="reset" class="btn btn-lg btn-danger" />
+              </form>
+              <div id="map"></div>
+              <p id="error"></p>
+      </div>
+    </div>
   </body>
 </html>
