@@ -304,6 +304,15 @@ class UsersController extends AppController
     public function saferoute(){
         
     }
+	
+	public function weather()
+    {
+
+    }
+
+    public function volsaferoute(){
+        
+    }
 
 }
 

@@ -51,7 +51,7 @@
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-shield"></i>Services <span class="caret"></span></a>
 				        <ul class="dropdown-menu">
 				          <li><?= $this->Html->link(__('Weather forecast'), ['controller' => 'Users','action' => 'weather'], array('class'=>'fa fa-tv')); ?></li>
-				          <li><?= $this->Html->link(__('Safe Route Information'), ['controller' => 'Users','action' => 'saferoute'], array('class'=>'fa fa-map-marker')); ?></li>
+				          <li><?= $this->Html->link(__('Safe Route Information'), ['controller' => 'Users','action' => 'volsaferoute'], array('class'=>'fa fa-map-marker')); ?></li>
 				          <li><?= $this->Html->link(__('Shared Resources Information'), ['controller' => 'Resources','action' => 'index'], array('class'=>'fa fa-building')); ?></li>
 				        </ul>
 				    </li>
