@@ -71,6 +71,9 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/emergencychecklist', ['controller' => 'Emergencychecklist', 'action' => 'index']);
     $routes->connect('/saferoute', ['controller' => 'Users','action' => 'saferoute']);
     $routes->connect('/resources', ['controller' => 'Resources','action' => 'index']);
+    $routes->connect('/admin', ['controller' => 'Users','action' => 'admin']);
+    $routes->connect('/Volunteer/organization', ['controller' => 'Organization','action' => 'index']);
+    $routes->connect('/Volunteer/volunteerdashboard', ['controller' => 'Users','action' => 'volunteerdashboard']);
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
