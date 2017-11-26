@@ -313,6 +313,10 @@ class UsersController extends AppController
     public function volsaferoute(){
         
     }
+	 public function userprofile()
+    {
+
+    }
 
 }
 
