@@ -15,7 +15,7 @@
     <table class="table table-hover bg-white" style="border-radius=25px;">
         <thead>
             <tr>
-                <th scope="col"><?= __('regid') ?></th>
+                <th scope="col"><?= __('No.') ?></th>
                 <th scope="col"><?= __('name') ?></th>
                 <th scope="col"><?= __('emailid') ?></th>
                 <th scope="col"><?= __('profession') ?></th>
@@ -26,9 +26,10 @@
             </tr>
         </thead>
         <tbody>
+            <?php $i=0 ?>
             <?php foreach ($volunteerregistration as $volunteerregistration): ?>
             <tr>
-                <td><?= $this->Number->format($volunteerregistration->regid) ?></td>
+                <td><?php echo ++$i ?></td>
                 <td><?= h($volunteerregistration->name) ?></td>
                 <td><?= h($volunteerregistration->emailid) ?></td>
                 <td><?= h($volunteerregistration->profession) ?></td>
