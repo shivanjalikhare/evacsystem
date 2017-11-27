@@ -46,11 +46,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="menu">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><?= $this->Html->link(__('Profile'), ['controller'=>'users', 'action' => 'userprofile'], array('class'=>'fa fa-user-circle')); ?></li>
+                    <li><?= $this->Html->link(__('Dashboard'), ['controller'=>'users', 'action' => 'dashboard'], array('class'=>'fa fa-user-circle')); ?></li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-shield"></i>Services <span class="caret"></span></a>
 				        <ul class="dropdown-menu">
 				         <li><?= $this->Html->link(__('Emergency Checklist'), ['controller' => 'Emergencychecklist', 'action' => 'index'], array('class'=>'fa fa-tasks')); ?></li>
-				          <li><?= $this->Html->link(__('Weather forecast'), ['controller' => 'Users','action' => 'forecast'], array('class'=>'fa fa-tv')); ?></li>
 				          <li><?= $this->Html->link(__('Safe Shelter Information'), ['controller' => 'Markers', 'action' => 'view'], array('class'=>'fa fa-home')); ?></li>
 				          <li><?= $this->Html->link(__('Safe Storage Information'), ['controller' => 'Storagemarkers', 'action' => 'view'], array('class'=>'fa fa-building')); ?></li>
 				         <li><?= $this->Html->link(__('Safe Route Information'), ['controller' => 'Users','action' => 'saferoute'], array('class'=>'fa fa-map-marker')); ?></li>

@@ -18,7 +18,7 @@
 			    <div class="users view large-9 medium-8 columns content">
 			    
 			   <div class="form-group">
-				<h3 class="h-bold">Profile <?= $this->Html->link(__('View Dashboard'), ['action' => 'dashboard'],array('class'=>'btn btn-lg btn-primary pull-right')); ?></h3>
+				<h3 class="h-bold">Profile <?= $this->Html->link(__('Go Back To Dashboard'), ['action' => 'dashboard'],array('class'=>'btn btn-lg btn-primary pull-right')); ?></h3>
                 
             	</div>
 			    <div class="row">
