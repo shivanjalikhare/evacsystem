@@ -8,7 +8,7 @@
 <html >
 	<body>
 		<div class="container marginbot-50 home-section color-dark">	
-			<h3 class="h-bold">Organization Dashboard</h3>
+			<h3 class="h-bold">Organization Dashboard <?= $this->Html->link(__('View Profile'), ['action' => 'organizationprofile'],array('class'=>'btn btn-lg btn-primary pull-right')); ?></h3>
 			<?php $user = $this->request->session()->read('Auth.User');
 					if(!empty($user)) {
     				echo 'Hi ', $user['email'];
