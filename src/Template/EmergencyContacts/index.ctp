@@ -14,7 +14,7 @@
         <table class="table table-bordered table-hover bg-white">
             <thead>
                 <tr>
-                    <th scope="col"><?= __('Eid') ?></th>
+                    <th scope="col"><?= __('No.') ?></th>
                     <th scope="col"><?= __('Etype') ?></th>
                     <th scope="col"><?= __('Name') ?></th>
                     <th scope="col"><?= __('Phone') ?></th>
@@ -24,9 +24,10 @@
                 </tr>
             </thead>
             <tbody>
+                <?php $i = 0; ?>
                 <?php foreach ($emergencyContacts as $emergencyContact): ?>
                 <tr>
-                    <td><?= $this->Number->format($emergencyContact->eid) ?></td>
+                    <td><?php echo ++$i; ?></td>
                     <td><?= h($emergencyContact->etype) ?></td>
                     <td><?= h($emergencyContact->name) ?></td>
                     <td><?= h($emergencyContact->phone) ?></td>
