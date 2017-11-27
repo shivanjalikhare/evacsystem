@@ -22,9 +22,11 @@
             </tr>
         </thead>
         <tbody>
+             <?php $i = 0; ?>
             <?php foreach ($emergencychecklist as $emergencychecklist): ?>
             <tr>
-                <td><?= $this->Number->format($emergencychecklist->id) ?></td>
+               
+                <td><?php echo ++$i; ?></td>
                 <td><?= h($emergencychecklist->checklist) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $emergencychecklist->id]) ?>
