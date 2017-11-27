@@ -8,6 +8,7 @@
 <div class="container marginbot-50 home-section color-dark">
     <div class="form-group">
         <?= $this->Html->link(__('Back to Emergency Contacts'), ['action' => 'index'], array('class'=>'btn btn-lg btn-danger')); ?>
+        <?= $this->Html->link(__('Edit Details'), ['action' => 'edit', $emergencyContact->eid], array('class'=>'btn btn-lg btn-primary pull-right')); ?>
     </div>
     <div class="container">
         <h3 class="h-bold"><?= __('Emergency Contact') ?></h3>
