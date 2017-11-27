@@ -14,11 +14,11 @@
         <table class="table table-bordered table-hover bg-white">
             <thead>
                 <tr>
-                    <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                    <th scope="col"><?= $this->Paginator->sort('type') ?></th>
-                    <th scope="col"><?= $this->Paginator->sort('description') ?></th>
-                    <th scope="col"><?= $this->Paginator->sort('quantity') ?></th>
-                    <th scope="col" ><?= $this->Paginator->sort('volunteeremail') ?></th>
+                    <th scope="col"><?= __('id') ?></th>
+                    <th scope="col"><?= __('type') ?></th>
+                    <th scope="col"><?= __('description') ?></th>
+                    <th scope="col"><?= __('quantity') ?></th>
+                    <th scope="col"><?= __('volunteeremail') ?></th>
                     <th scope="col" class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
