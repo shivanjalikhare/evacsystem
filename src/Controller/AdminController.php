@@ -167,4 +167,15 @@ class AdminController extends AppController
     {
 
     }
+	public function adminprofile($id = null)
+    {
+        $this->Users = TableRegistry::get('Users');
+        $user = $this->Users->get($id, [
+            'contain' => []
+        ]);
+
+        $this->set('user', $user);
+        $this->set('_serialize', ['user']);
+
+    }
 }
