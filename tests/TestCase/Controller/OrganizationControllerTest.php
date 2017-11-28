@@ -116,4 +116,23 @@ class OrganizationControllerTest extends IntegrationTestCase
         $this->assertSession('Email sent.', 'Flash.flash.0.message');
 
     }
+
+    /**
+     * Test mock send email method with argument 
+     *
+     * @return void
+     */
+    public function testMockSendEmailtoOrganizationMethod()
+    {
+        // Create a stub for the OrganizationController class.
+        $stub = $this->createMock(OrganizationController::class);
+
+        // Configure the stub.
+        $stub->method('sendEmail')//mocking the sendEmail method
+             ->will($this->returnArgument(0));
+
+        // Calling $stub->sendEmail() will now return
+        // 'razin2good@gmail.com'.
+        $this->assertEquals('razin2good@gmail.com', $stub->sendEmail('razin2good@gmail.com'));
+    }
 }
