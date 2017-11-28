@@ -15,9 +15,7 @@ class ResourcesControllerTest extends IntegrationTestCase
      *
      * @var array
      */
-    public $fixtures = [
-        'app.resources'
-    ];
+    public $fixtures = ['app.resources'];
 
     /**
      * Test index method
@@ -26,7 +24,18 @@ class ResourcesControllerTest extends IntegrationTestCase
      */
     public function testIndex()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->session([ //mock user session
+        'Auth' => [
+            'User' => [
+                'id' => 1,
+                // other keys.
+            ]
+        ]
+        ]);
+    
+        $this->get('/resources');
+        // Check that the response was a 200
+        $this->assertResponseOk();
     }
 
     /**
@@ -36,7 +45,19 @@ class ResourcesControllerTest extends IntegrationTestCase
      */
     public function testView()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        //$this->markTestIncomplete('Not implemented yet.');
+        $this->session([ //mock user session
+        'Auth' => [
+            'User' => [
+                'id' => 1,
+                // other keys.
+            ]
+        ]
+        ]);
+    
+        $this->get('/resources/view/1');
+        // Check that the response was a 200
+        $this->assertResponseOk();
     }
 
     /**
@@ -46,7 +67,32 @@ class ResourcesControllerTest extends IntegrationTestCase
      */
     public function testAdd()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->session([
+        'Auth' => [
+            'User' => [
+                'email' => 'xyz@gmail.com',
+                'password' => '123456',
+                // other keys.
+            ]
+        ]
+        ]);
+
+        $this->get('/resources');
+
+        // Check for a 2xx response code
+        $response = $this->assertResponseOk();
+
+        $data = [
+        'id' => 15,
+        'type' => 'transport',
+        'description' => 'micro bus',
+        'quantity' => 5,
+        'volunteeremail' => 'vol1@gmail.com'
+        ];
+        $this->post('/resources/add', $data);
+
+        // Check for a 2xx response code
+        $this->assertResponseSuccess();
     }
 
     /**
@@ -56,7 +102,23 @@ class ResourcesControllerTest extends IntegrationTestCase
      */
     public function testEdit()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        //$this->markTestIncomplete('Not implemented yet.');
+        // Set session data
+        $this->session([ //mock user session
+        'Auth' => [
+            'User' => [
+                'id' => 1,
+                // other keys.
+                ]
+            ]
+        ]);
+
+        $this->get('/resources');
+        // Check that the response was a 200
+        $this->assertResponseOk();
+
+        $this->get('/resources/edit/1');
+        $this->assertResponseOk();  
     }
 
     /**
@@ -66,6 +128,22 @@ class ResourcesControllerTest extends IntegrationTestCase
      */
     public function testDelete()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+         // Set session data
+        $this->session([ //mock user session
+        'Auth' => [
+            'User' => [
+                'id' => 1,
+                // other keys.
+                ]
+            ]
+        ]);
+
+        $this->get('/resources');
+        // Check that the response was a 200
+        $this->assertResponseOk(); 
+
+        $this->get('/resources/delete/2');
+        // Check for a 2xx/3xx response code
+        $this->assertResponseCode(405); // checking delete method is not allowed to perform without confirmation
     }
 }
