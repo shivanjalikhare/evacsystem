@@ -150,4 +150,29 @@ class VolunteerregistrationControllerTest extends IntegrationTestCase
         // Check for a 2xx/3xx response code
         $this->assertResponseCode(405); // checking delete method is not allowed to perform without confirmation
     }
+
+    /**
+     * Test send email method
+     *
+     * @return void
+     */
+    public function testsendEmailtoVolunteer()
+    {
+        //$this->markTestIncomplete('Not implemented yet.');
+        $this->enableRetainFlashMessages();
+        $this->session([ //mock user session
+            'Auth' => [
+                'User' => [
+                'id' => 1,
+                // other keys.
+                ]
+            ]
+        ]);
+        $this->get('/Volunteer/volunteerregistration'); 
+        
+        $emailObject = new VolunteerregistrationController();
+        $emailObject->sendEmail('razin2good@gmail.com');
+        $this->assertSession('Email sent to volunteer.', 'Flash.flash.0.message');
+
+    }
 }
