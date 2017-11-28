@@ -15,7 +15,7 @@
     				echo $user['email'] ;
 					}
 				?> </span><br/>
-				<?= $this->Html->link(__('View Profile'), ['action' => 'userprofile'],array('class'=>'btn btn-lg btn-primary pull-right')); ?></h3>
+				<?= $this->Html->link(__('View Profile'), ['controller' => 'Users','action' => 'userprofile', $user['id']],array('class'=>'btn btn-lg btn-primary pull-right')); ?></h3>
 				
         		<h3 class="h-bold">Weather Forecast</h3>
 				<a href="https://www.accuweather.com/en/us/new-york-ny/10007/current-weather/349727" class="aw-widget-legal">
