@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost/evacsystem/" />
+<title>Test case 1- home page navbar functionality</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Test case 1- home page navbar functionality</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/evacsystem/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.navbar-toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=About Us</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.h-bold</td>
+	<td>About Us</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p</td>
+	<td>Working together to ensure that Louisiana is prepared to respond to emergencies, recover from them, and mitigate against their impacts. We coordinate assistance provided to individuals, households, and businesses recovering from disaster or emergency impacts.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.navbar-toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Services</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='service']/div/div/div/div/div/h2</td>
+	<td>Services</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[@id='service']/div[2]/div/div/div/div/div/div/span</td>
+	<td>Shelter</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.service-desc &gt; p</td>
+	<td>If an emergency has forced you to evacuate your home, If you need our help, come to the shelter. When you arrive, please let us know if you have any specific needs or requests for equipment, supplies or food requirements. Every effort will be made to accommodate your needs.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[@id='service']/div[2]/div/div/div[2]/div/div/div/span</td>
+	<td>Storage</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='service']/div[2]/div/div/div[2]/div/div/div[2]/p</td>
+	<td>Are you inflicted with damage to property? We will help you in mobilizing your belongings quickly. In addition to providing self-storage, supplies are provided to help with disaster recovery, temperature-controlled sample transportation, including boxes, tarps, propane and propane tanks.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[@id='service']/div[2]/div/div/div[3]/div/div/div/span</td>
+	<td>Transportation</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='service']/div[2]/div/div/div[3]/div/div/div[2]/p</td>
+	<td>We provide transportation in the vicinity of the disaster for who cannot drive or who do not have a vehicle. Our Support includes accessible vehicles (e.g., lift-equipped or vehicles suitable for transporting individuals who use oxygen).</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[@id='service']/div[2]/div/div/div[4]/div/div/div/span</td>
+	<td>Medical Aid</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='service']/div[2]/div/div/div[4]/div/div/div[2]/p</td>
+	<td>We provide immediate medical help needed for you. We provide services that include personal health monitoring, transportation of medicines and other emergency first-aid treatment for the evacuees.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.navbar-toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h2.h-bold &gt; span.fa.fa-users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[@id='login']/div/div/div/div/div/h2</td>
+	<td>Login</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=label</td>
+	<td>Email</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.input.password &gt; label</td>
+	<td>Password</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-arrow-up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.navbar-toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign Up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h2.h-bold</td>
+	<td>Sign up</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=type</td>
+	<td>label=Individual</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=confirm-password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.btn.btn-primary</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
