@@ -121,16 +121,16 @@ class VolunteerregistrationController extends AppController
 
 
         $email
-            ->template('emergency')
+            ->template('volunteer')
             ->emailFormat('html')
-            ->subject(sprintf('Emergency Attention %s', $user_email))
+            ->subject(sprintf('Volunteer support'))
             ->viewVars(['username'=>$user_email ,'useremail'=>$user_email])
             ->to($user_email)
             ->send();   
 
         $this->Flash->success(__('Email sent.'));
 
-        return $this->redirect(['controller'=>'EmergencyContacts','action' => 'index']);
+        return $this->redirect(['action' => 'index']);
     }
 
 }

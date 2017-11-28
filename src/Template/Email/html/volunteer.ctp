@@ -3,7 +3,7 @@
 
 <p>
 
-Please communicate with <b><?= $value ?></b> as soon as possible. He/she wants to volunteer.<br>
+Please communicate with <b><?= $value ?></b> as soon as possible. He/she wants to be volunteer.<br>
 
 <br>
 
