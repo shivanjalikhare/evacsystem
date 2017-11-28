@@ -24,7 +24,9 @@
                         <?php echo $this->Form->control('Type',['placeholder'=>'Enter your type', 'class'=>'form-control']);?>
                     </div>
             </fieldset>
+			<div class="form-group">
             <?= $this->Form->button(__('Submit'), array('class'=>'btn btn-lg btn-primary' )); ?>
+			</div>
             <?= $this->Form->end() ?>
         </div> 
     </div>
