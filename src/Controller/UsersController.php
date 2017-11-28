@@ -351,5 +351,70 @@ class UsersController extends AppController
         $this->set('_serialize', ['user']);
     }
 
+     /**
+     * indexshelter method
+     *
+     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
+     */
+    public function indexshelter()
+    {
+        $this->loadModel('Locations');
+        $locations = $this->paginate($this->Locations);
+
+        $this->set(compact('locations'));
+        $this->set('_serialize', ['locations']);
+
+        $this->loadModel('Markers');
+        $markers = $this->paginate($this->Markers);
+
+        $this->set(compact('markers'));
+        $this->set('_serialize', ['markers']);
+
+
+    }
+
+    /**
+     * addshelterlocation method
+     *
+     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
+     */
+    public function addshelterlocation()
+    {   
+        $this->loadModel('Locations');
+        $location = $this->Locations->newEntity();
+        if ($this->request->is('post')) {
+            $location = $this->Locations->patchEntity($location, $this->request->getData());
+            if ($this->Locations->save($location)) {
+                $this->Flash->success(__('The location has been saved.'));
+
+                return $this->redirect(['action' => 'indexshelter']);
+            }
+            $this->Flash->error(__('The location could not be saved. Please, try again.'));
+        }
+        $this->set(compact('location'));
+        $this->set('_serialize', ['location']);
+    }
+
+    /**
+     * deleteshelterlocation method
+     *
+     * @param string|null $id User id.
+     * @return \Cake\Http\Response|null Redirects to index.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function deleteshelterlocation($id = null)
+    {
+        $this->loadModel('Locations');
+        $this->request->allowMethod(['post', 'delete']);
+        $location = $this->Locations->get($id);
+        if ($this->Locations->delete($location)) {
+            $this->Flash->success(__('The safe shelter location has been deleted.'));
+        } else {
+            $this->Flash->error(__('The safe shelter location could not be deleted. Please, try again.'));
+        }
+
+        return $this->redirect(['action' => 'indexshelter']);
+    }
+
 }
 

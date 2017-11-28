@@ -76,7 +76,8 @@ Router::scope('/', function (RouteBuilder $routes) {
 
 
 	 $routes->connect('/admin', ['controller' => 'Admin','action' => 'adminlogin']);
-
+    $routes->connect('/indexshelter', ['controller' => 'Users','action' => 'indexshelter']);
+    $routes->connect('/addshelterlocation', ['controller' => 'Users','action' => 'addshelterlocation']);
 
 
     $routes->connect('/Volunteer/organization', ['controller' => 'Organization','action' => 'index']);
