@@ -50,8 +50,8 @@
                     <li><?= $this->Html->link(__('Team'), ['controller' => 'Orgteam','action' => 'index'], array('class'=>'fa fa-user					')); ?></li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-shield"></i>Services <span class="caret"></span></a>
 				        <ul class="dropdown-menu">
-				          <li><?= $this->Html->link(__('Safe Shelter Information'), [], array('class'=>'fa fa-home')); ?></li>
-				          <li><?= $this->Html->link(__('Safe Storage Information'), [], array('class'=>'fa fa-building')); ?></li>
+				          <li><?= $this->Html->link(__('Safe Shelter Management'), [], array('class'=>'fa fa-home')); ?></li>
+				          <li><?= $this->Html->link(__('Safe Storage Management'), [], array('class'=>'fa fa-building')); ?></li>
 				        </ul>
 				    </li>
                     <li><?= $this->Html->link('Logout',['controller'=>'users', 'action'=>'logout'], array('class'=>'fa fa-lock')); ?></a></li>
