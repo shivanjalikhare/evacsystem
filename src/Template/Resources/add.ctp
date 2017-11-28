@@ -24,7 +24,7 @@
                     </div>
                     <div class="form-group">
                          <?php $user = $this->request->session()->read('Auth.User'); ?>
-                        <?php echo $this->Form->control('volunteer email',['value'=>$user['email'], 'class'=>'form-control']);?>
+                        <?php echo $this->Form->control('volunteeremail',['value'=>$user['email'], 'class'=>'form-control']);?>
                     </div>
         </fieldset>
         <div class="form-group">
