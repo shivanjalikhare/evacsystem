@@ -46,6 +46,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="menu">
                   <ul class="nav navbar-nav navbar-right">
+					<li><?= $this->Html->link(__('Dashboard'), ['controller' => 'Admin','action' => 'adminUserDashboard'], array('class'=>'fa fa-user')); ?></li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-shield"></i>User Management<span class="caret"></span></a>
 				        <ul class="dropdown-menu">
 				        	<li><?= $this->Html->link(__('List Users'), ['controller'=>'Admin', 'action' => 'indexUsersAdmin'], array('class'=>'fa fa-user')); ?></li>
