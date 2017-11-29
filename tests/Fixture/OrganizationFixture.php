@@ -49,12 +49,21 @@ class OrganizationFixture extends TestFixture
     public $records = [
         [
             'orgid' => 1,
-            'type' => 'Lorem ipsum dolor sit amet',
-            'name' => 'Lorem ipsum dolor sit amet',
-            'address' => 'Lorem ipsum dolor sit amet',
-            'orgemail' => 'Lorem ipsum dolor sit amet',
-            'phone' => 1,
-            'webaddress' => 'Lorem ipsum dolor sit amet'
+            'type' => 'Private',
+            'name' => 'Organization 1',
+            'address' => '200 East Lewis Street, LA, 70503',
+            'orgemail' => 'razin2good@gmail.com',
+            'phone' => 3374428237,
+            'webaddress' => 'www.org1.com'
+        ],
+        [
+            'orgid' => 2,
+            'type' => 'Private',
+            'name' => 'Organization 2',
+            'address' => '200 East Lewis Street, LA, 70503',
+            'orgemail' => 'razinfh@gmail.com',
+            'phone' => 3374586325,
+            'webaddress' => 'www.org1.com'
         ],
     ];
 }
