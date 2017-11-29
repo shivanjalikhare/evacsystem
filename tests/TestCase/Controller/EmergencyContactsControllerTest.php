@@ -111,7 +111,7 @@ class EmergencyContactsControllerTest extends IntegrationTestCase
     
     public function testDelete()
     {
-        // Set session data
+         // Set session data
         $this->session([ //mock user session
         'Auth' => [
             'User' => [
@@ -120,10 +120,14 @@ class EmergencyContactsControllerTest extends IntegrationTestCase
                 ]
             ]
         ]);
-        
-        $this->get('/users/emergency/delete/2');
+
+        $this->get('/users/emergency');
+        // Check that the response was a 200
+        $this->assertResponseOk(); 
+
+        $this->get('/users/emergency/delete');
         // Check for a 2xx/3xx response code
-        $this->assertResponseSuccess();
+        $this->assertResponseCode(405); // checking delete method is not allowed to perform without confirmation
        
     }
 
