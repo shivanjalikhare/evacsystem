@@ -23,9 +23,7 @@ class OrganizationTableTest extends TestCase
      *
      * @var array
      */
-    public $fixtures = [
-        'app.organization'
-    ];
+    public $fixtures = ['app.organization'];
 
     /**
      * setUp method
@@ -58,7 +56,12 @@ class OrganizationTableTest extends TestCase
      */
     public function testInitialize()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->Organization->initialize([]); //have to call manually to get coverage.
+        $this->assertEquals(
+            'orgid',
+            $this->Organization->primaryKey(),
+            'The [Organization]Table default primary key is expected to be `id`.'
+        );
     }
 
     /**
@@ -68,6 +71,63 @@ class OrganizationTableTest extends TestCase
      */
     public function testValidationDefault()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        //checking all the fields are given for creating new entity
+        $data = [
+            'orgid' => 1,
+            'type' => 'Private',
+            'name' => 'Organization 1',
+            'address' => '200 East Lewis Street, LA, 70503',
+            'orgemail' => 'razin2good@gmail.com',
+            'phone' => 12734521,
+            'webaddress' => 'www.org1.com'
+        ];
+
+
+        $user = $this->Organization->newEntity($data);
+        $this->assertEmpty($user->errors());// this TC will fail if the phone field is exeds integer range
+
     }
+
+    /**
+     * Test validationDefault field check method
+     *
+     * @return void
+     */
+    public function testValidationDefault_CheckFields() {
+        $validator = new \Cake\Validation\Validator(); //object
+        $validator = $this->Organization->validationDefault($validator);
+        $this->assertTrue($validator->hasField('orgid'));
+        $this->assertTrue($validator->hasField('type'));
+        $this->assertTrue($validator->hasField('name'));
+        $this->assertTrue($validator->hasField('address'));
+        $this->assertTrue($validator->hasField('orgemail'));
+        $this->assertTrue($validator->hasField('phone')); 
+        $this->assertTrue($validator->hasField('webaddress'));    
+    }
+
+    /**
+     * Test fixture records of specific email id
+     *
+     * @return void
+     */
+     public function testFixtureRecordExits()
+     {
+       
+        $data = $this->Organization->find()->where(['orgemail' => 'razinfh@gmail.com']);
+        $this->assertEquals(1, $data->count());
+
+     }
+
+      /**
+     * Test fixture records of similar type
+     *
+     * @return void
+     */
+     public function testFixtureRecordsWithSameType()
+     {
+       
+        $data = $this->Organization->find()->where(['type' => 'Private']);
+        $this->assertEquals(2, $data->count());
+
+     }
 }
