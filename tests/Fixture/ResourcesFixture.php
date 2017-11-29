@@ -40,10 +40,17 @@ class ResourcesFixture extends TestFixture
     public $records = [
         [
             'id' => 1,
-            'type' => 'Lorem ipsum dolor sit amet',
-            'description' => 'Lorem ipsum dolor sit amet',
-            'quantity' => 1,
-            'volunteeremail' => 'Lorem ipsum dolor sit amet'
+            'type' => 'Transport',
+            'description' => 'Minibus',
+            'quantity' => 5,
+            'volunteeremail' => 'razin2good@gmail.com'
+        ],
+        [
+            'id' => 2,
+            'type' => 'Transport',
+            'description' => 'Car',
+            'quantity' => 3,
+            'volunteeremail' => 'razinfh@outlook.com'
         ],
     ];
 }
