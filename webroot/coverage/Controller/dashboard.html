@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for D:\xampp\htdocs\evacsystem\src/Controller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../.css/bootstrap.min.css" rel="stylesheet">
+  <link href="../.css/nv.d3.min.css" rel="stylesheet">
+  <link href="../.css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="../.js/html5shiv.min.js"></script>
+  <script src="../.js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">D:\xampp\htdocs\evacsystem\src</a></li>
+        <li><a href="index.html">Controller</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="AdminController.php.html#19">AdminController</a></td><td class="text-right">9%</td></tr>
+       <tr><td><a href="UsersController.php.html#17">UsersController</a></td><td class="text-right">15%</td></tr>
+       <tr><td><a href="OrganizationController.php.html#15">OrganizationController</a></td><td class="text-right">42%</td></tr>
+       <tr><td><a href="EmergencychecklistController.php.html#13">EmergencychecklistController</a></td><td class="text-right">45%</td></tr>
+       <tr><td><a href="EmergencyContactsController.php.html#17">EmergencyContactsController</a></td><td class="text-right">53%</td></tr>
+       <tr><td><a href="ResourcesController.php.html#13">ResourcesController</a></td><td class="text-right">61%</td></tr>
+       <tr><td><a href="OrgteamController.php.html#13">OrgteamController</a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="VolunteerregistrationController.php.html#15">VolunteerregistrationController</a></td><td class="text-right">70%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="UsersController.php.html#17">UsersController</a></td><td class="text-right">1433</td></tr>
+       <tr><td><a href="AdminController.php.html#19">AdminController</a></td><td class="text-right">259</td></tr>
+       <tr><td><a href="OrganizationController.php.html#15">OrganizationController</a></td><td class="text-right">33</td></tr>
+       <tr><td><a href="EmergencyContactsController.php.html#17">EmergencyContactsController</a></td><td class="text-right">23</td></tr>
+       <tr><td><a href="EmergencychecklistController.php.html#13">EmergencychecklistController</a></td><td class="text-right">22</td></tr>
+       <tr><td><a href="ResourcesController.php.html#13">ResourcesController</a></td><td class="text-right">15</td></tr>
+       <tr><td><a href="VolunteerregistrationController.php.html#15">VolunteerregistrationController</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="OrgteamController.php.html#13">OrgteamController</a></td><td class="text-right">13</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="UsersController.php.html#48"><abbr title="UsersController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#173"><abbr title="UsersController::forecast">forecast</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#153"><abbr title="UsersController::signup">signup</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#143"><abbr title="UsersController::organizationdashboard">organizationdashboard</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#138"><abbr title="UsersController::volunteerdashboard">volunteerdashboard</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#128"><abbr title="UsersController::dashboard">dashboard</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#227"><abbr title="UsersController::checklist">checklist</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#235"><abbr title="UsersController::Emergencychecklist">Emergencychecklist</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#240"><abbr title="UsersController::password">password</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#261"><abbr title="UsersController::sendResetEmail">sendResetEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#276"><abbr title="UsersController::reset">reset</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#304"><abbr title="UsersController::saferoute">saferoute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#308"><abbr title="UsersController::weather">weather</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#313"><abbr title="UsersController::volsaferoute">volsaferoute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#317"><abbr title="UsersController::userprofile">userprofile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OrganizationController.php.html#102"><abbr title="OrganizationController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OrganizationController.php.html#77"><abbr title="OrganizationController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="OrganizationController.php.html#54"><abbr title="OrganizationController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AdminController.php.html#147"><abbr title="AdminController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AdminController.php.html#67"><abbr title="AdminController::adminlogout">adminlogout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AdminController.php.html#77"><abbr title="AdminController::adminUserDashboard">adminUserDashboard</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AdminController.php.html#82"><abbr title="AdminController::admindelete">admindelete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AdminController.php.html#103"><abbr title="AdminController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AdminController.php.html#129"><abbr title="AdminController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AdminController.php.html#166"><abbr title="AdminController::adminweatherforecast">adminweatherforecast</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#327"><abbr title="UsersController::volunteerprofile">volunteerprofile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AdminController.php.html#170"><abbr title="AdminController::adminprofile">adminprofile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#337"><abbr title="UsersController::editprofile">editprofile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EmergencyContactsController.php.html#42"><abbr title="EmergencyContactsController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EmergencyContactsController.php.html#103"><abbr title="EmergencyContactsController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#332"><abbr title="UsersController::organizationprofile">organizationprofile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EmergencychecklistController.php.html#61"><abbr title="EmergencychecklistController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#169"><abbr title="UsersController::forgotPassword">forgotPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#210"><abbr title="UsersController::delete">delete</abbr></a></td><td class="text-right">16%</td></tr>
+       <tr><td><a href="VolunteerregistrationController.php.html#102"><abbr title="VolunteerregistrationController::delete">delete</abbr></a></td><td class="text-right">16%</td></tr>
+       <tr><td><a href="OrgteamController.php.html#99"><abbr title="OrgteamController::delete">delete</abbr></a></td><td class="text-right">16%</td></tr>
+       <tr><td><a href="ResourcesController.php.html#99"><abbr title="ResourcesController::delete">delete</abbr></a></td><td class="text-right">16%</td></tr>
+       <tr><td><a href="EmergencyContactsController.php.html#128"><abbr title="EmergencyContactsController::delete">delete</abbr></a></td><td class="text-right">16%</td></tr>
+       <tr><td><a href="EmergencychecklistController.php.html#86"><abbr title="EmergencychecklistController::delete">delete</abbr></a></td><td class="text-right">16%</td></tr>
+       <tr><td><a href="UsersController.php.html#185"><abbr title="UsersController::edit">edit</abbr></a></td><td class="text-right">18%</td></tr>
+       <tr><td><a href="UsersController.php.html#30"><abbr title="UsersController::index">index</abbr></a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="AdminController.php.html#33"><abbr title="AdminController::adminlogin">adminlogin</abbr></a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="UsersController.php.html#80"><abbr title="UsersController::login">login</abbr></a></td><td class="text-right">31%</td></tr>
+       <tr><td><a href="AdminController.php.html#57"><abbr title="AdminController::indexUsersAdmin">indexUsersAdmin</abbr></a></td><td class="text-right">40%</td></tr>
+       <tr><td><a href="ResourcesController.php.html#74"><abbr title="ResourcesController::edit">edit</abbr></a></td><td class="text-right">54%</td></tr>
+       <tr><td><a href="OrgteamController.php.html#74"><abbr title="OrgteamController::edit">edit</abbr></a></td><td class="text-right">54%</td></tr>
+       <tr><td><a href="VolunteerregistrationController.php.html#77"><abbr title="VolunteerregistrationController::edit">edit</abbr></a></td><td class="text-right">54%</td></tr>
+       <tr><td><a href="ResourcesController.php.html#51"><abbr title="ResourcesController::add">add</abbr></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="VolunteerregistrationController.php.html#54"><abbr title="VolunteerregistrationController::add">add</abbr></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="UsersController.php.html#63"><abbr title="UsersController::add">add</abbr></a></td><td class="text-right">72%</td></tr>
+       <tr><td><a href="OrgteamController.php.html#51"><abbr title="OrgteamController::add">add</abbr></a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="AppController.php.html#79"><abbr title="AppController::beforeRender">beforeRender</abbr></a></td><td class="text-right">80%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="UsersController.php.html#276"><abbr title="UsersController::reset">reset</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="UsersController.php.html#240"><abbr title="UsersController::password">password</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="UsersController.php.html#80"><abbr title="UsersController::login">login</abbr></a></td><td class="text-right">17</td></tr>
+       <tr><td><a href="UsersController.php.html#153"><abbr title="UsersController::signup">signup</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="AdminController.php.html#103"><abbr title="AdminController::add">add</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="AdminController.php.html#147"><abbr title="AdminController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="UsersController.php.html#337"><abbr title="UsersController::editprofile">editprofile</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="EmergencyContactsController.php.html#103"><abbr title="EmergencyContactsController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="EmergencychecklistController.php.html#61"><abbr title="EmergencychecklistController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="OrganizationController.php.html#54"><abbr title="OrganizationController::add">add</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="OrganizationController.php.html#77"><abbr title="OrganizationController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="UsersController.php.html#185"><abbr title="UsersController::edit">edit</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="AdminController.php.html#33"><abbr title="AdminController::adminlogin">adminlogin</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="AdminController.php.html#82"><abbr title="AdminController::admindelete">admindelete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="OrganizationController.php.html#102"><abbr title="OrganizationController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="UsersController.php.html#261"><abbr title="UsersController::sendResetEmail">sendResetEmail</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="UsersController.php.html#210"><abbr title="UsersController::delete">delete</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="VolunteerregistrationController.php.html#102"><abbr title="VolunteerregistrationController::delete">delete</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="ResourcesController.php.html#99"><abbr title="ResourcesController::delete">delete</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="OrgteamController.php.html#99"><abbr title="OrgteamController::delete">delete</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="EmergencychecklistController.php.html#86"><abbr title="EmergencychecklistController::delete">delete</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="EmergencyContactsController.php.html#128"><abbr title="EmergencyContactsController::delete">delete</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="ResourcesController.php.html#74"><abbr title="ResourcesController::edit">edit</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="OrgteamController.php.html#74"><abbr title="OrgteamController::edit">edit</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="VolunteerregistrationController.php.html#77"><abbr title="VolunteerregistrationController::edit">edit</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="VolunteerregistrationController.php.html#54"><abbr title="VolunteerregistrationController::add">add</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="ResourcesController.php.html#51"><abbr title="ResourcesController::add">add</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="UsersController.php.html#63"><abbr title="UsersController::add">add</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="OrgteamController.php.html#51"><abbr title="OrgteamController::add">add</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="AppController.php.html#79"><abbr title="AppController::beforeRender">beforeRender</abbr></a></td><td class="text-right">3</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 5.2.2</a> using <a href="https://secure.php.net/" target="_top">PHP 7.1.9</a> with <a href="https://xdebug.org/">Xdebug 2.5.5</a> and <a href="https://phpunit.de/">PHPUnit 6.4.3</a> at Wed Nov 29 5:21:03 UTC 2017.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../.js/jquery.min.js" type="text/javascript"></script>
+  <script src="../.js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../.js/holder.min.js" type="text/javascript"></script>
+  <script src="../.js/d3.min.js" type="text/javascript"></script>
+  <script src="../.js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([0,1,1,0,0,2,1,2,1,0,1,2], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([33,0,7,2,1,1,3,2,1,2,2,22], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[9.375,18,"<a href=\"AdminController.php.html#19\">AdminController<\/a>"],[90.9090909090909,4,"<a href=\"AppController.php.html#28\">AppController<\/a>"],[53.191489361702125,11,"<a href=\"EmergencyContactsController.php.html#17\">EmergencyContactsController<\/a>"],[45.16129032258064,9,"<a href=\"EmergencychecklistController.php.html#13\">EmergencychecklistController<\/a>"],[100,4,"<a href=\"ErrorController.php.html#24\">ErrorController<\/a>"],[100,1,"<a href=\"MarkersController.php.html#13\">MarkersController<\/a>"],[42.5531914893617,11,"<a href=\"OrganizationController.php.html#15\">OrganizationController<\/a>"],[66.66666666666666,10,"<a href=\"OrgteamController.php.html#13\">OrgteamController<\/a>"],[61.111111111111114,10,"<a href=\"ResourcesController.php.html#13\">ResourcesController<\/a>"],[15.602836879432624,48,"<a href=\"UsersController.php.html#17\">UsersController<\/a>"],[70.2127659574468,11,"<a href=\"VolunteerregistrationController.php.html#15\">VolunteerregistrationController<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"AdminController.php.html#26\">AdminController::beforeFilter<\/a>"],[25,3,"<a href=\"AdminController.php.html#33\">AdminController::adminlogin<\/a>"],[40,1,"<a href=\"AdminController.php.html#57\">AdminController::indexUsersAdmin<\/a>"],[0,1,"<a href=\"AdminController.php.html#67\">AdminController::adminlogout<\/a>"],[0,1,"<a href=\"AdminController.php.html#77\">AdminController::adminUserDashboard<\/a>"],[0,2,"<a href=\"AdminController.php.html#82\">AdminController::admindelete<\/a>"],[0,3,"<a href=\"AdminController.php.html#103\">AdminController::add<\/a>"],[0,1,"<a href=\"AdminController.php.html#129\">AdminController::view<\/a>"],[0,3,"<a href=\"AdminController.php.html#147\">AdminController::edit<\/a>"],[0,1,"<a href=\"AdminController.php.html#166\">AdminController::adminweatherforecast<\/a>"],[0,1,"<a href=\"AdminController.php.html#170\">AdminController::adminprofile<\/a>"],[100,1,"<a href=\"AppController.php.html#40\">AppController::initialize<\/a>"],[80,3,"<a href=\"AppController.php.html#79\">AppController::beforeRender<\/a>"],[100,1,"<a href=\"EmergencyContactsController.php.html#27\">EmergencyContactsController::index<\/a>"],[0,1,"<a href=\"EmergencyContactsController.php.html#42\">EmergencyContactsController::view<\/a>"],[100,1,"<a href=\"EmergencyContactsController.php.html#53\">EmergencyContactsController::sendEmail<\/a>"],[90,3,"<a href=\"EmergencyContactsController.php.html#80\">EmergencyContactsController::add<\/a>"],[0,3,"<a href=\"EmergencyContactsController.php.html#103\">EmergencyContactsController::edit<\/a>"],[16.666666666666664,2,"<a href=\"EmergencyContactsController.php.html#128\">EmergencyContactsController::delete<\/a>"],[100,1,"<a href=\"EmergencychecklistController.php.html#21\">EmergencychecklistController::index<\/a>"],[90,3,"<a href=\"EmergencychecklistController.php.html#36\">EmergencychecklistController::add<\/a>"],[0,3,"<a href=\"EmergencychecklistController.php.html#61\">EmergencychecklistController::edit<\/a>"],[16.666666666666664,2,"<a href=\"EmergencychecklistController.php.html#86\">EmergencychecklistController::delete<\/a>"],[100,1,"<a href=\"ErrorController.php.html#31\">ErrorController::initialize<\/a>"],[100,1,"<a href=\"ErrorController.php.html#42\">ErrorController::beforeFilter<\/a>"],[100,1,"<a href=\"ErrorController.php.html#52\">ErrorController::beforeRender<\/a>"],[100,1,"<a href=\"ErrorController.php.html#65\">ErrorController::afterFilter<\/a>"],[100,1,"<a href=\"MarkersController.php.html#23\">MarkersController::view<\/a>"],[100,1,"<a href=\"OrganizationController.php.html#24\">OrganizationController::index<\/a>"],[100,1,"<a href=\"OrganizationController.php.html#39\">OrganizationController::view<\/a>"],[0,3,"<a href=\"OrganizationController.php.html#54\">OrganizationController::add<\/a>"],[0,3,"<a href=\"OrganizationController.php.html#77\">OrganizationController::edit<\/a>"],[0,2,"<a href=\"OrganizationController.php.html#102\">OrganizationController::delete<\/a>"],[100,1,"<a href=\"OrganizationController.php.html#115\">OrganizationController::sendEmail<\/a>"],[100,1,"<a href=\"OrgteamController.php.html#21\">OrgteamController::index<\/a>"],[100,1,"<a href=\"OrgteamController.php.html#36\">OrgteamController::view<\/a>"],[80,3,"<a href=\"OrgteamController.php.html#51\">OrgteamController::add<\/a>"],[54.54545454545454,3,"<a href=\"OrgteamController.php.html#74\">OrgteamController::edit<\/a>"],[16.666666666666664,2,"<a href=\"OrgteamController.php.html#99\">OrgteamController::delete<\/a>"],[100,1,"<a href=\"ResourcesController.php.html#21\">ResourcesController::index<\/a>"],[100,1,"<a href=\"ResourcesController.php.html#36\">ResourcesController::view<\/a>"],[60,3,"<a href=\"ResourcesController.php.html#51\">ResourcesController::add<\/a>"],[54.54545454545454,3,"<a href=\"ResourcesController.php.html#74\">ResourcesController::edit<\/a>"],[16.666666666666664,2,"<a href=\"ResourcesController.php.html#99\">ResourcesController::delete<\/a>"],[100,1,"<a href=\"UsersController.php.html#20\">UsersController::beforeFilter<\/a>"],[25,1,"<a href=\"UsersController.php.html#30\">UsersController::index<\/a>"],[0,1,"<a href=\"UsersController.php.html#48\">UsersController::view<\/a>"],[72.72727272727273,3,"<a href=\"UsersController.php.html#63\">UsersController::add<\/a>"],[31.57894736842105,6,"<a href=\"UsersController.php.html#80\">UsersController::login<\/a>"],[0,1,"<a href=\"UsersController.php.html#128\">UsersController::dashboard<\/a>"],[0,1,"<a href=\"UsersController.php.html#138\">UsersController::volunteerdashboard<\/a>"],[0,1,"<a href=\"UsersController.php.html#143\">UsersController::organizationdashboard<\/a>"],[100,1,"<a href=\"UsersController.php.html#148\">UsersController::logout<\/a>"],[0,3,"<a href=\"UsersController.php.html#153\">UsersController::signup<\/a>"],[0,1,"<a href=\"UsersController.php.html#169\">UsersController::forgotPassword<\/a>"],[0,1,"<a href=\"UsersController.php.html#173\">UsersController::forecast<\/a>"],[18.181818181818183,3,"<a href=\"UsersController.php.html#185\">UsersController::edit<\/a>"],[16.666666666666664,2,"<a href=\"UsersController.php.html#210\">UsersController::delete<\/a>"],[0,1,"<a href=\"UsersController.php.html#227\">UsersController::checklist<\/a>"],[0,1,"<a href=\"UsersController.php.html#235\">UsersController::Emergencychecklist<\/a>"],[0,4,"<a href=\"UsersController.php.html#240\">UsersController::password<\/a>"],[0,2,"<a href=\"UsersController.php.html#261\">UsersController::sendResetEmail<\/a>"],[0,5,"<a href=\"UsersController.php.html#276\">UsersController::reset<\/a>"],[0,1,"<a href=\"UsersController.php.html#304\">UsersController::saferoute<\/a>"],[0,1,"<a href=\"UsersController.php.html#308\">UsersController::weather<\/a>"],[0,1,"<a href=\"UsersController.php.html#313\">UsersController::volsaferoute<\/a>"],[0,1,"<a href=\"UsersController.php.html#317\">UsersController::userprofile<\/a>"],[0,1,"<a href=\"UsersController.php.html#327\">UsersController::volunteerprofile<\/a>"],[0,1,"<a href=\"UsersController.php.html#332\">UsersController::organizationprofile<\/a>"],[0,3,"<a href=\"UsersController.php.html#337\">UsersController::editprofile<\/a>"],[100,1,"<a href=\"VolunteerregistrationController.php.html#24\">VolunteerregistrationController::index<\/a>"],[100,1,"<a href=\"VolunteerregistrationController.php.html#39\">VolunteerregistrationController::view<\/a>"],[60,3,"<a href=\"VolunteerregistrationController.php.html#54\">VolunteerregistrationController::add<\/a>"],[54.54545454545454,3,"<a href=\"VolunteerregistrationController.php.html#77\">VolunteerregistrationController::edit<\/a>"],[16.666666666666664,2,"<a href=\"VolunteerregistrationController.php.html#102\">VolunteerregistrationController::delete<\/a>"],[100,1,"<a href=\"VolunteerregistrationController.php.html#115\">VolunteerregistrationController::sendEmail<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
