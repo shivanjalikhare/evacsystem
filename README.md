@@ -10,7 +10,14 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 ## Installation
 
 1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+2. Download/clone the evacsystem (master) project in xampp-htdocs in your pc.
+3. You should have xampp-server running in your pc.
+4. Open project directory in xampp-shell and run "php composer.phar update/install"
+5. Create a root database in Mysql named-'cake-auth'.
+6. Import all the tables from the folder database_sql in cake-auth.
+7. In app.php- under datasources manage your database connection.
+8. You are ready to run!
+
 
 If Composer is installed globally, run
 
