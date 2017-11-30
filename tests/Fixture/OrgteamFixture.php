@@ -47,10 +47,17 @@ class OrgteamFixture extends TestFixture
     public $records = [
         [
             'teamid' => 1,
-            'teamname' => 'Lorem ipsum dolor sit amet',
-            'members' => 1,
-            'details' => 'Lorem ipsum dolor sit amet',
-            'contact' => 'Lorem ipsum dolor sit amet'
+            'teamname' => 'Evac1',
+            'members' => 3,
+            'details' => 'Razin, Shan, Arman',
+            'contact' => 'razinfh@outlook.com'
+        ],
+        [
+            'teamid' => 2,
+            'teamname' => 'Medical',
+            'members' => 2,
+            'details' => 'Shahruk, Arman',
+            'contact' => 'razin2good@gmail.com'
         ],
     ];
 }
