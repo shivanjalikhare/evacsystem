@@ -49,12 +49,31 @@ class VolunteerregistrationFixture extends TestFixture
     public $records = [
         [
             'regid' => 1,
-            'name' => 'Lorem ipsum dolor sit amet',
-            'emailid' => 'Lorem ipsum dolor sit amet',
-            'profession' => 'Lorem ipsum dolor sit amet',
-            'supporttype' => 'Lorem ipsum dolor sit amet',
-            'location' => 'Lorem ipsum dolor sit amet',
-            'notes' => 'Lorem ipsum dolor sit amet'
+            'name' => 'Abbas Rahman',
+            'emailid' => 'abbas26@gmail.com',
+            'profession' => 'Doctor',
+            'supporttype' => 'Medical help',
+            'location' => 'New Orleans',
+            'notes' => 'I can help with medicine.'
         ],
+        [
+            'regid' => 2,
+            'name' => 'Mina Khan',
+            'emailid' => 'mik@gmail.com',
+            'profession' => 'Teacher',
+            'supporttype' => 'Transport',
+            'location' => 'Michigan',
+            'notes' => 'I can help with transportation.'
+        ],
+        [
+            'regid' => 3,
+            'name' => 'Mizan Hussain',
+            'emailid' => 'mizan567@gmail.com',
+            'profession' => 'Doctor',
+            'supporttype' => 'Medical help',
+            'location' => 'New York',
+            'notes' => 'I can help with medicine.'
+        ],
+
     ];
 }
