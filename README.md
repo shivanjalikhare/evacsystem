@@ -40,6 +40,10 @@ bin/cake server -p 8765
 
 Then visit `http://localhost:8765` to see the welcome page.
 
+## TestCases
+1. Follow evacsystem/tests/TestCase/Selenium View Testing/READ ME.docx to see instruction for view testing.
+2. evacsystem/tests/TestCase/Stress Testing/READ ME.docx to see instruction for stress testing.
+
 ## Update
 
 Since this skeleton is a starting point for your application and various files
