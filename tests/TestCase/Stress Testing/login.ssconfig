@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<TestModel Version="4.7.6542">
+  <TestCase Id="88a9c035-c370-482b-be7a-a208c26d8755" RecordedOn="12/1/2017 8:38:56 PM" Name="login" MixWeight="0" PageThinkTimeMode="Constant" ConstantPageThinkTime="2" ThinkTime="0">
+    <Session Id="1" />
+    <Page Title="urs.smartscreen.microsoft.com/windows/browser/edge/service/navi" Goal="15">
+      <Session Id="2" />
+    </Page>
+    <Session Cache="RequestAlways" Id="3" />
+    <Session Cache="Cached" Id="4" />
+    <Session Id="5" />
+    <Session Id="6" />
+    <Session Id="7" />
+    <Session Cache="RequestAlways" Id="8" />
+    <Session Cache="RequestAlways" Id="9" />
+    <Page Title="urs.smartscreen.microsoft.com/windows/browser/edge/service/navi" Goal="15">
+      <Session Id="10" />
+      <Session Id="11" />
+      <Session Id="12" />
+      <Session Id="13" />
+      <Session Cache="RequestAlways" Id="14" />
+    </Page>
+    <Page Title="api.reasonsecurity.com/api.ashx" Goal="15">
+      <Session Id="15" />
+      <Session Id="16" />
+      <Session Id="17" />
+    </Page>
+    <Session Cache="RequestAlways" Id="18" />
+    <Session Id="19" />
+    <Session Id="20" />
+    <Session Cache="RequestAlways" Id="21" />
+    <Page Title="iecvlist.microsoft.com/edge/desktop/1499812172/edgecompatviewli" Goal="15">
+      <Session Cache="Cached" Id="22" />
+      <Session Id="23" />
+      <Session Cache="Cached" Id="24" />
+      <Session Id="25" />
+    </Page>
+    <Page Title="play.google.com/log" Goal="15">
+      <Session Cache="RequestAlways" Id="26" />
+      <Session Cache="RequestAlways" Id="27" />
+      <Session Id="28" />
+      <Session Id="29" />
+      <Session Id="30" />
+      <Session Id="31" />
+      <Session Cache="RequestAlways" Id="32" />
+    </Page>
+  </TestCase>
+  <TestCase Id="932e35c0-9cd4-40fc-ac48-f3922208495f" RecordedOn="12/1/2017 8:46:02 PM" Name="signup" MixWeight="0" PageThinkTimeMode="Constant" ConstantPageThinkTime="2" ThinkTime="0">
+    <Session Cache="Cached" Id="1" />
+    <Session Cache="Cached" Id="2" />
+    <Session Cache="Cached" Id="3" />
+    <Session Id="4" />
+    <Session Cache="RequestAlways" Id="5" />
+    <Session Cache="RequestAlways" Id="6" />
+    <Session Id="7" />
+    <Session Cache="Cached" Id="8" />
+    <Page Title="urs.smartscreen.microsoft.com/windows/browser/edge/service/navi" Goal="15">
+      <Session Id="9" />
+      <Session Id="10" />
+      <Session Id="11" />
+      <Session Id="12" />
+      <Session Cache="RequestAlways" Id="13">
+        <Extractor Name="__1509506802224019" ExtractorType="Regex" Occurrence="1" Hidden="true" RegEx="[^0-9\-]([0-9]{12,})[^0-9]?" />
+        <Extractor Name="__22B98FEC4F90A6AF6A30" ExtractorType="Regex" Occurrence="10" Hidden="true" RegEx="([0-9A-F]{8}\-{0,1}[0-9A-F]{4}\-{0,1}[0-9A-F]{4}\-{0,1}[0-9A-F]{4}\-{0,1}[0-9A-F]{12})" />
+        <Extractor Name="__4A429FF7F8B03453CF7E" ExtractorType="Regex" Occurrence="1" Hidden="true" RegEx="([0-9A-F]{8}\-{0,1}[0-9A-F]{4}\-{0,1}[0-9A-F]{4}\-{0,1}[0-9A-F]{4}\-{0,1}[0-9A-F]{12})" />
+      </Session>
+      <Session Cache="RequestAlways" Id="14">
+        <Parameter ParameterNumber="12" RequestPart="QueryString" Extractor="__1509506802224019" />
+        <Parameter ParameterNumber="20" RequestPart="QueryString" Data="{{__4A429FF7F8B03453CF7E@@32}}4A429FF7F8B03453CF7E3136E47BB78206CA9758.{{__22B98FEC4F90A6AF6A30@@32}}22B98FEC4F90A6AF6A30D842FF9040B139FDD8E3" />
+      </Session>
+      <Session Cache="RequestAlways" Id="15">
+        <Parameter ParameterNumber="12" RequestPart="QueryString" Extractor="__1509506802224019" />
+        <Parameter ParameterNumber="20" RequestPart="QueryString" Data="{{__4A429FF7F8B03453CF7E@@32}}4A429FF7F8B03453CF7E3136E47BB78206CA9758.{{__22B98FEC4F90A6AF6A30@@32}}22B98FEC4F90A6AF6A30D842FF9040B139FDD8E3" />
+      </Session>
+    </Page>
+    <Page Title="www.youtube.com/api/stats/qoe" Goal="15">
+      <Session Id="16" />
+      <Session Cache="RequestAlways" Id="17">
+        <Parameter ParameterNumber="12" RequestPart="QueryString" Extractor="__1509506802224019" />
+        <Parameter ParameterNumber="20" RequestPart="QueryString" Data="{{__4A429FF7F8B03453CF7E@@32}}4A429FF7F8B03453CF7E3136E47BB78206CA9758.{{__22B98FEC4F90A6AF6A30@@32}}22B98FEC4F90A6AF6A30D842FF9040B139FDD8E3" />
+      </Session>
+      <Session Cache="RequestAlways" Id="18">
+        <Extractor Name="__1509506282075689" ExtractorType="Regex" Occurrence="1" Hidden="true" RegEx="[^0-9\-]([0-9]{12,})[^0-9]?" />
+        <Extractor Name="__12EA1C49359164A8E99E" ExtractorType="Regex" Occurrence="1" Hidden="true" RegEx="([0-9A-F]{8}\-{0,1}[0-9A-F]{4}\-{0,1}[0-9A-F]{4}\-{0,1}[0-9A-F]{4}\-{0,1}[0-9A-F]{12})" />
+        <Extractor Name="__76D385B48EA58A23BF67" ExtractorType="Regex" Occurrence="10" Hidden="true" RegEx="([0-9A-F]{8}\-{0,1}[0-9A-F]{4}\-{0,1}[0-9A-F]{4}\-{0,1}[0-9A-F]{4}\-{0,1}[0-9A-F]{12})" />
+      </Session>
+      <Session Cache="RequestAlways" Id="19">
+        <Parameter ParameterNumber="11" RequestPart="QueryString" Extractor="__1509506282075689" />
+        <Parameter ParameterNumber="19" RequestPart="QueryString" Data="{{__12EA1C49359164A8E99E@@32}}12EA1C49359164A8E99EC8292D190876A6E490FB.{{__76D385B48EA58A23BF67@@32}}76D385B48EA58A23BF67706E1F312CE2A0A10E5C" />
+      </Session>
+    </Page>
+    <Session Cache="RequestAlways" Id="20">
+      <Parameter ParameterNumber="12" RequestPart="QueryString" Extractor="__1509506802224019" />
+      <Parameter ParameterNumber="20" RequestPart="QueryString" Data="{{__4A429FF7F8B03453CF7E@@32}}4A429FF7F8B03453CF7E3136E47BB78206CA9758.{{__22B98FEC4F90A6AF6A30@@32}}22B98FEC4F90A6AF6A30D842FF9040B139FDD8E3" />
+    </Session>
+    <Session Id="21" />
+    <Session Cache="Cached" Id="22" />
+    <Session Cache="RequestAlways" Id="23">
+      <Parameter ParameterNumber="11" RequestPart="QueryString" Extractor="__1509506282075689" />
+      <Parameter ParameterNumber="19" RequestPart="QueryString" Data="{{__12EA1C49359164A8E99E@@32}}12EA1C49359164A8E99EC8292D190876A6E490FB.{{__76D385B48EA58A23BF67@@32}}76D385B48EA58A23BF67706E1F312CE2A0A10E5C" />
+    </Session>
+    <Page Title="a.blazemeter.com/api/v4/workspaces/180308/masters/active/count" Goal="15">
+      <Session Id="24" />
+    </Page>
+    <Session Cache="Cached" Id="25" />
+    <Page Title="urs.smartscreen.microsoft.com/windows/browser/edge/service/navi" Goal="15">
+      <Session Id="26" />
+      <Session Id="27" />
+      <Session Cache="Cached" Id="28" />
+      <Session Cache="RequestAlways" Id="29">
+        <Parameter ParameterNumber="12" RequestPart="QueryString" Extractor="__1509506802224019" />
+        <Parameter ParameterNumber="20" RequestPart="QueryString" Data="{{__4A429FF7F8B03453CF7E@@32}}4A429FF7F8B03453CF7E3136E47BB78206CA9758.{{__22B98FEC4F90A6AF6A30@@32}}22B98FEC4F90A6AF6A30D842FF9040B139FDD8E3" />
+      </Session>
+    </Page>
+    <Page Title="urs.smartscreen.microsoft.com/windows/browser/edge/service/navi" Goal="15">
+      <Session Id="30" />
+    </Page>
+  </TestCase>
+  <TestCase Id="bb95d3f9-eac8-4cf8-96bc-1f76a4e55c4c" RecordedOn="12/1/2017 8:48:56 PM" Name="Signup" MixWeight="0" PageThinkTimeMode="Constant" ConstantPageThinkTime="2" TransactionThinkTimeMode="Constant" ConstantTransactionThinkTime="2" ThinkTime="0">
+    <Session Id="1" />
+    <Session Id="2" />
+    <Session Id="3" />
+  </TestCase>
+  <TestCase Id="cad1b154-4c9b-467d-9976-7a6099619045" RecordedOn="12/1/2017 9:06:20 PM" Name="login evac" PageThinkTimeMode="Constant" ConstantPageThinkTime="2" ThinkTime="0">
+    <Page Title="www.youtube.com/youtubei/v1/log_event" Goal="15">
+      <Session Cache="RequestAlways" Id="1" />
+      <Session Id="2" />
+    </Page>
+    <Page Title="support.stresstimulus.com/rest/quickreload/latest/22741166" Goal="15">
+      <Session Id="3" />
+      <Session Cache="Cached" Id="4" />
+      <Session Cache="Cached" Id="5" />
+      <Session Cache="Cached" Id="6" />
+      <Session Cache="Cached" Id="7" />
+    </Page>
+    <Session Cache="Cached" Id="8" />
+  </TestCase>
+  <KPICounters>
+    <KPICounter Name="Requests/Sec" AlertIfOver="No" />
+    <KPICounter Name="Avg. Response (s)" AlertIfOver="No" />
+    <KPICounter Name="KB Received/Sec" AlertIfOver="No" />
+    <KPICounter Name="Errors/Sec" AlertIfOver="No" />
+    <KPICounter Name="Pending Requests" AlertIfOver="No" />
+  </KPICounters>
+  <PerfGraphs>
+    <PerfGraph Title="Load Agents">
+      <PerfMachine Name="." DisplayName="&lt;Local&gt;">
+        <PerfMachineCounter Category="Processor" Counter="% Processor Time" Instance="_Total" AlertIfOver="No" DisplayName="Processor - % Processor Time - _Total" Description="% Processor Time is the percentage of elapsed time that the processor spends to execute a non-Idle thread. It is calculated by measuring the percentage of time that the processor spends executing the idle thread and then subtracting that value from 100%. (Each processor has an idle thread that consumes cycles when no other threads are ready to run). This counter is the primary indicator of processor activity, and displays the average percentage of busy time observed during the sample interval. It should be noted that the accounting calculation of whether the processor is idle is performed at an internal sampling interval of the system clock (10ms). On todays fast processors, % Processor Time can therefore underestimate the processor utilization as the processor may be spending a lot of time servicing threads between the system clock sampling interval. Workload based timer applications are one example  of applications  which are more likely to be measured inaccurately as timers are signaled just after the sample is taken." />
+        <PerfMachineCounter Category="Memory" Counter="Available MBytes" AlertIfOver="No" DisplayName="Memory - Available MBytes" Description="Available MBytes is the amount of physical memory, in Megabytes, immediately available for allocation to a process or for system use. It is equal to the sum of memory assigned to the standby (cached), free and zero page lists." />
+        <PerfMachineCounter Category="PhysicalDisk" Counter="% Disk Time" Instance="_Total" AlertIfOver="No" DisplayName="PhysicalDisk - % Disk Time - _Total" Description="% Disk Time is the percentage of elapsed time that the selected disk drive was busy servicing read or write requests." />
+      </PerfMachine>
+    </PerfGraph>
+  </PerfGraphs>
+  <Agents>
+    <Agent Name="Local" Host="DESKTOP-KHAH13S" UserName="" />
+  </Agents>
+  <Browsers>
+    <Browser Name="Chrome 49.0" MaxHostConnections="1" MaxTotalConnections="6" ReplaceUserAgent="false" UserAgentString="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36" />
+  </Browsers>
+  <Networks>
+    <Network Name="Gigabit Ethernet" UploadBandwith="1000000" DownloadBandwith="1000000" />
+  </Networks>
+  <TestConfiguration TestID="dc7b614e-71a2-4bbe-8b05-074044a15c86" CurrentTestCase="cad1b154-4c9b-467d-9976-7a6099619045" TestRunName="login evac" ConstantVU="50" />
+</TestModel>
